@@ -1,10 +1,10 @@
-ï»¿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="3/21/2026 1:13:56 PM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="PCASTRIT"
-  DTS:CreatorName="PCASTRIT\astri"
+  DTS:CreatorComputerName="ANONYME"
+  DTS:CreatorName="ANONYME"
   DTS:DTSID="{BEBC92B9-70E6-4136-88A8-448BA2544419}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=dw_relationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{6D5B10D1-CB73-42F2-9834-0B54BDF2CC9A}PCASTRIT.dw_relationalAccident;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ANONYME;Initial Catalog=dw_relationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{6D5B10D1-CB73-42F2-9834-0B54BDF2CC9A}ANONYME.dw_relationalAccident;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,20 +37,20 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{1EBA03E2-8769-40B8-87CC-00780A3F1CC4}PCASTRIT.RelationalAccident;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ANONYME;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{1EBA03E2-8769-40B8-87CC-00780A3F1CC4}ANONYME.RelationalAccident;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\TÃ¢che de flux de donnÃ©es"
+      DTS:refId="Package\Tâche de flux de données"
       DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="TÃ¢che de flux de donnÃ©es"
+      DTS:Description="Tâche de flux de données"
       DTS:DTSID="{3B67870E-1738-4C03-AC2F-D81BB40FA368}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="TÃ¢che de flux de donnÃ©es"
+      DTS:ObjectName="Tâche de flux de données"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -58,113 +58,113 @@
           version="1">
           <components>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e"
+              refId="Package\Tâche de flux de données\Colonne dérivée"
               componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dÃ©rivÃ©e;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="CrÃ©e de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrÃ©e de transformation. CrÃ©ez de nouvelles colonnes ou remplacez celles qui existent dÃ©jÃ . Par exemple, concatÃ©nez les valeurs de la colonne 'prÃ©nom' et de la colonne 'nom' pour crÃ©er une colonne 'nom complet'."
-              name="Colonne dÃ©rivÃ©e"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-                  description="EntrÃ©e de la transformation de colonnes dÃ©rivÃ©es"
-                  name="EntrÃ©e de colonne dÃ©rivÃ©e">
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e].Columns[Copy of luminosite]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of luminosite]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of luminosite"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]" />
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e].Columns[Copy of conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of conditions_atmo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conditions_atmo"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]" />
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e].Columns[Copy of etat_surface]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of etat_surface]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of etat_surface"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]" />
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e]"
-                  description="Sortie par dÃ©faut de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
-                  name="Sortie de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[lum_deriv]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[lum_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="102"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[lum_deriv]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[lum_deriv]"
                       name="lum_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
-                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]},1,1)) + [SUBSTRING](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]},2,[LEN](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]})),"NC")</property>
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]},1,1)) + [SUBSTRING](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]},2,[LEN](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]})),"NC")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of luminosite],1,1)) + SUBSTRING([Copy of luminosite],2,LEN([Copy of luminosite])),"NC")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[condition_atmo_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="102"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[condition_atmo_deriv]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[condition_atmo_deriv]"
                       name="condition_atmo_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
-                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]},1,1)) + [SUBSTRING](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]},2,[LEN](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]})),"NC")</property>
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]},1,1)) + [SUBSTRING](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]},2,[LEN](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]})),"NC")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of conditions_atmo],1,1)) + SUBSTRING([Copy of conditions_atmo],2,LEN([Copy of conditions_atmo])),"NC")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[eta_surface_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="102"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[eta_surface_deriv]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[eta_surface_deriv]"
                       name="eta_surface_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
-                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]},1,1)) + [SUBSTRING](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]},2,[LEN](#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]})),"NC")</property>
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]},1,1)) + [SUBSTRING](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]},2,[LEN](#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]})),"NC")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of etat_surface],1,1)) + SUBSTRING([Copy of etat_surface],2,LEN([Copy of etat_surface])),"NC")</property>
                       </properties>
@@ -173,23 +173,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e]"
-                  description="Sortie d'erreur de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -198,106 +198,106 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es"
+              refId="Package\Tâche de flux de données\Conversion de données"
               componentClassID="Microsoft.DataConvert"
-              contactInfo="Conversion de donnÃ©es;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="Conversion de donnÃ©es"
-              name="Conversion de donnÃ©es"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]"
-                  name="EntrÃ©e de conversion de donnÃ©es">
+                  refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[lum_deriv]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[lum_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="lum_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[lum_deriv]" />
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[lum_deriv]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[condition_atmo_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="condition_atmo_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[condition_atmo_deriv]" />
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[condition_atmo_deriv]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[eta_surface_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="eta_surface_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[eta_surface_deriv]" />
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[eta_surface_deriv]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es]"
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]"
                   exclusionGroup="1"
-                  name="Sortie de conversion de donnÃ©es"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]">
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of lum_deriv]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of lum_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of lum_deriv]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of lum_deriv]"
                       name="Copy of lum_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[lum_deriv]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[lum_deriv]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of condition_atmo_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of condition_atmo_deriv]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of condition_atmo_deriv]"
                       name="Copy of condition_atmo_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[condition_atmo_deriv]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[condition_atmo_deriv]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of eta_surface_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of eta_surface_deriv]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of eta_surface_deriv]"
                       name="Copy of eta_surface_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[eta_surface_deriv]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[eta_surface_deriv]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
@@ -305,22 +305,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es]"
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de conversion de donnÃ©es"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]">
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -329,9 +329,9 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB"
+              refId="Package\Tâche de flux de données\Destination OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;4"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
               description="Destination OLE DB"
               name="Destination OLE DB"
               usesDispositions="true"
@@ -339,110 +339,110 @@
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowset">[dw].[DimConditionsAccident]</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la variable contenant le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriÃ©tÃ© DefaultCodePage lors de la description des donnÃ©es caractÃ¨res."
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
                   name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le mode utilisÃ© pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
                   typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les valeurs fournies pour les colonnes d'identitÃ© seront copiÃ©es Ã  la destination. Si la valeur est dÃ©finie Ã  False, les valeurs des colonnes d'identitÃ© seront gÃ©nÃ©rÃ©es automatiquement Ã  la destination. Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiÃ©e Ã  la destination. Si la valeur est dÃ©finie Ã  False, les colonnes contenant la valeur NULL auront leurs valeurs par dÃ©faut insÃ©rÃ©es Ã  la destination. Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie les options Ã  utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie quand les validations sont Ã©mises pendant l'insertion des donnÃ©es.  Une valeur Ã©gale Ã Â 0 spÃ©cifie qu'une validation sera Ã©mise Ã  la fin de l'insertion des donnÃ©es.  Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadMaxInsertCommitSize">2147483647</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[destination]"
                   connectionManagerRefId="Package.ConnectionManagers[destination]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB]"
-                  errorOrTruncationOperation="InsÃ©rer"
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="EntrÃ©e de destination OLE DB">
+                  name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of lum_deriv]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of lum_deriv]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of lum_deriv"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[luminosite]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of lum_deriv]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[luminosite]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of lum_deriv]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of condition_atmo_deriv]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of condition_atmo_deriv"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[conditions_atmo]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of condition_atmo_deriv]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[conditions_atmo]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of condition_atmo_deriv]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of eta_surface_deriv]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of eta_surface_deriv"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[etat_surface]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of eta_surface_deriv]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[etat_surface]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of eta_surface_deriv]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[conditions_key]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[conditions_key]"
                       dataType="i4"
                       name="conditions_key" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[luminosite]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[luminosite]"
                       dataType="wstr"
                       length="100"
                       name="luminosite" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[conditions_atmo]"
                       dataType="wstr"
                       length="100"
                       name="conditions_atmo" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[etat_surface]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[etat_surface]"
                       dataType="wstr"
                       length="100"
                       name="etat_surface" />
@@ -451,22 +451,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB]">
+                  synchronousInputId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -475,130 +475,130 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res"
+              refId="Package\Tâche de flux de données\Table de caractères"
               componentClassID="Microsoft.CharacterMap"
-              contactInfo="Table de caractÃ¨res;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;2"
-              description="Applique des fonctions de chaÃ®ne aux donnÃ©es caractÃ¨res. Par exemple, convertissez des donnÃ©es en majuscules en donnÃ©es en minuscules. Fonctionne uniquement sur les donnÃ©es de colonne prÃ©sentant un type chaÃ®ne."
-              name="Table de caractÃ¨res"
+              contactInfo="Table de caractères;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Applique des fonctions de chaîne aux données caractères. Par exemple, convertissez des données en majuscules en données en minuscules. Fonctionne uniquement sur les données de colonne présentant un type chaîne."
+              name="Table de caractères"
               usesDispositions="true"
               version="2">
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]"
-                  name="EntrÃ©e de la table de caractÃ¨res">
+                  refId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères]"
+                  name="Entrée de la table de caractères">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res].Columns[luminosite]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères].Columns[luminosite]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="luminosite"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]" />
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res].Columns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères].Columns[conditions_atmo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="conditions_atmo"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]" />
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res].Columns[etat_surface]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères].Columns[etat_surface]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="etat_surface"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]" />
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res]"
+                  refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères]"
                   exclusionGroup="1"
-                  name="Sortie de la table de caractÃ¨res"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]">
+                  name="Sortie de la table de caractères"
+                  synchronousInputId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]"
                       dataType="wstr"
                       errorOrTruncationOperation="Colonne de mappage"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]"
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]"
                       name="Copy of luminosite"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.UInt32"
-                          description="SpÃ©cifie les opÃ©rations de chaÃ®nes Ã  appliquer."
+                          description="Spécifie les opérations de chaînes à appliquer."
                           name="MapFlags"
                           typeConverter="LCMappingType">256</property>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e sur laquelle s'appliquent les opÃ©rations."
-                          name="InputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Colonne de mappage"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]"
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]"
                       name="Copy of conditions_atmo"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.UInt32"
-                          description="SpÃ©cifie les opÃ©rations de chaÃ®nes Ã  appliquer."
+                          description="Spécifie les opérations de chaînes à appliquer."
                           name="MapFlags"
                           typeConverter="LCMappingType">256</property>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e sur laquelle s'appliquent les opÃ©rations."
-                          name="InputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]"
                       dataType="wstr"
                       errorOrTruncationOperation="Colonne de mappage"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]"
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]"
                       name="Copy of etat_surface"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.UInt32"
-                          description="SpÃ©cifie les opÃ©rations de chaÃ®nes Ã  appliquer."
+                          description="Spécifie les opérations de chaînes à appliquer."
                           name="MapFlags"
                           typeConverter="LCMappingType">256</property>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e sur laquelle s'appliquent les opÃ©rations."
-                          name="InputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res]"
+                  refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie d'erreur de la table de caractères]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de la table de caractÃ¨res"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]">
+                  name="Sortie d'erreur de la table de caractères"
+                  synchronousInputId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -607,10 +607,10 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Trier"
+              refId="Package\Tâche de flux de données\Trier"
               componentClassID="Microsoft.Sort"
-              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;1"
-              description="Trie les donnÃ©es d'entrÃ©e en ordre croissant ou dÃ©croissant lorsque le tri ne peut pas Ãªtre effectuÃ© Ã  la source. Par exemple, triez les donnÃ©es de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. RemarqueÂ : nous ne recommandons pas cette transformation dans le cas de flux de donnÃ©es volumineux."
+              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
               name="Trier"
               version="1">
               <properties>
@@ -620,216 +620,216 @@
                   name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le nombre maximal de threads Ã  utiliser pour le tri."
+                  description="Spécifie le nombre maximal de threads à utiliser pour le tri."
                   expressionType="Notify"
                   name="MaximumThreads">-1</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri]"
-                  name="EntrÃ©e de tri">
+                  refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri]"
+                  name="Entrée de tri">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[luminosite]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[luminosite]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="luminosite"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]">
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[conditions_atmo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="conditions_atmo"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]">
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[etat_surface]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[etat_surface]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="etat_surface"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]">
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of luminosite]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Copy of luminosite]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of luminosite"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]">
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Copy of conditions_atmo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conditions_atmo"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]">
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of etat_surface]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Copy of etat_surface]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of etat_surface"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]">
+                      lineageId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[lum_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[lum_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="lum_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[lum_deriv]">
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[lum_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[condition_atmo_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="condition_atmo_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[condition_atmo_deriv]">
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[condition_atmo_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[eta_surface_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="eta_surface_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[eta_surface_deriv]">
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[eta_surface_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of lum_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Copy of lum_deriv]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of lum_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of lum_deriv]">
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of lum_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Copy of condition_atmo_deriv]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of condition_atmo_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of condition_atmo_deriv]">
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of condition_atmo_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Copy of eta_surface_deriv]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of eta_surface_deriv"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of eta_surface_deriv]">
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of eta_surface_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
@@ -839,179 +839,179 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri]"
+                  refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri]"
                   isSorted="true"
                   name="Sortie de tri">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[luminosite]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[luminosite]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[luminosite]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[luminosite]"
                       name="luminosite">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[conditions_atmo]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[conditions_atmo]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[conditions_atmo]"
                       name="conditions_atmo">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[etat_surface]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[etat_surface]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[etat_surface]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[etat_surface]"
                       name="etat_surface">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of luminosite]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of luminosite]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of luminosite]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of luminosite]"
                       name="Copy of luminosite">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of luminosite]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of luminosite]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of conditions_atmo]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of conditions_atmo]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of conditions_atmo]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of conditions_atmo]"
                       name="Copy of conditions_atmo">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of conditions_atmo]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of conditions_atmo]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of etat_surface]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of etat_surface]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of etat_surface]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of etat_surface]"
                       name="Copy of etat_surface">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of etat_surface]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of etat_surface]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[lum_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[lum_deriv]"
                       dataType="wstr"
                       length="102"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[lum_deriv]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[lum_deriv]"
                       name="lum_deriv">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[lum_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[lum_deriv]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[condition_atmo_deriv]"
                       dataType="wstr"
                       length="102"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[condition_atmo_deriv]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[condition_atmo_deriv]"
                       name="condition_atmo_deriv">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[condition_atmo_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[condition_atmo_deriv]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[eta_surface_deriv]"
                       dataType="wstr"
                       length="102"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[eta_surface_deriv]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[eta_surface_deriv]"
                       name="eta_surface_deriv">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[eta_surface_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[eta_surface_deriv]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of lum_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of lum_deriv]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of lum_deriv]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of lum_deriv]"
                       name="Copy of lum_deriv"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of lum_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of lum_deriv]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of condition_atmo_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of condition_atmo_deriv]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of condition_atmo_deriv]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of condition_atmo_deriv]"
                       name="Copy of condition_atmo_deriv"
                       sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of condition_atmo_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of condition_atmo_deriv]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of eta_surface_deriv]"
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of eta_surface_deriv]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri].Columns[Copy of eta_surface_deriv]"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Copy of eta_surface_deriv]"
                       name="Copy of eta_surface_deriv"
                       sortKeyPosition="3">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of eta_surface_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of eta_surface_deriv]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1020,9 +1020,9 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident"
+              refId="Package\Tâche de flux de données\vue_condition_accident"
               componentClassID="Microsoft.OLEDBSource"
-              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;7"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
               description="Source OLE DB"
               name="vue_condition_accident"
               usesDispositions="true"
@@ -1030,139 +1030,139 @@
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowset">[dbo].[v_dim_conditions_accident]</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la variable contenant le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
-                  description="Variable contenant la commande SQL Ã  exÃ©cuter."
+                  description="Variable contenant la commande SQL à exécuter."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriÃ©tÃ© DefaultCodePage lors de la description des donnÃ©es caractÃ¨res."
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
                   name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le mode utilisÃ© pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
-                  description="Mappages entre les paramÃ¨tres de la commande SQL et les variables."
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Connections[OleDbConnection]"
+                  refId="Package\Tâche de flux de données\vue_condition_accident.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[source]"
                   connectionManagerRefId="Package.ConnectionManagers[source]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB]"
+                  refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB]"
                   name="Sortie de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[luminosite]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[luminosite]"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[luminosite]"
                       name="luminosite"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[conditions_atmo]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[conditions_atmo]"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[conditions_atmo]"
                       name="conditions_atmo"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[etat_surface]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[etat_surface]"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].Columns[etat_surface]"
                       name="etat_surface"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[luminosite]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[luminosite]"
                       dataType="wstr"
                       length="50"
                       name="luminosite" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[conditions_atmo]"
                       dataType="wstr"
                       length="50"
                       name="conditions_atmo" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[etat_surface]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB].ExternalColumns[etat_surface]"
                       dataType="wstr"
                       length="50"
                       name="etat_surface" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB]"
+                  refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[luminosite]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[luminosite]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[luminosite]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[luminosite]"
                       name="luminosite" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[conditions_atmo]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[conditions_atmo]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[conditions_atmo]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[conditions_atmo]"
                       name="conditions_atmo" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[etat_surface]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[etat_surface]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[etat_surface]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[etat_surface]"
                       name="etat_surface" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1173,30 +1173,30 @@
           </components>
           <paths>
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de colonne dÃ©rivÃ©e]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]"
-              name="Sortie de colonne dÃ©rivÃ©e"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e]" />
+              refId="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
+              endId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de conversion de donnÃ©es]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Trier.Inputs[EntrÃ©e de tri]"
-              name="Sortie de conversion de donnÃ©es"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es]" />
+              refId="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
+              endId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri]"
+              name="Sortie de conversion de données"
+              startId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]" />
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de la table de caractÃ¨res]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-              name="Sortie de la table de caractÃ¨res"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res]" />
+              refId="Package\Tâche de flux de données.Paths[Sortie de la table de caractères]"
+              endId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de la table de caractères"
+              startId="Package\Tâche de flux de données\Table de caractères.Outputs[Sortie de la table de caractères]" />
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de source OLE DB]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]"
+              refId="Package\Tâche de flux de données.Paths[Sortie de source OLE DB]"
+              endId="Package\Tâche de flux de données\Table de caractères.Inputs[Entrée de la table de caractères]"
               name="Sortie de source OLE DB"
-              startId="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident.Outputs[Sortie de source OLE DB]" />
+              startId="Package\Tâche de flux de données\vue_condition_accident.Outputs[Sortie de source OLE DB]" />
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de tri]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB]"
+              refId="Package\Tâche de flux de données.Paths[Sortie de tri]"
+              endId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
               name="Sortie de tri"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Trier.Outputs[Sortie de tri]" />
+              startId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1204,7 +1204,7 @@
     <DTS:Executable
       DTS:refId="Package\vider dim"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="TÃ¢che d'exÃ©cution de requÃªtes SQL"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
       DTS:DTSID="{B3EBA965-E336-4D11-AF2E-D6621EAEAF09}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -1226,15 +1226,15 @@
       DTS:From="Package\vider dim"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Contrainte"
-      DTS:To="Package\TÃ¢che de flux de donnÃ©es" />
+      DTS:To="Package\Tâche de flux de données" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnÃ©es (x,y), la largeur et la hauteur.-->
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
 <!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition prÃ©cÃ©dente seront perdues et le concepteur rÃ©organisera automatiquement les Ã©lÃ©ments sur l'aire de conception.-->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
 <Objects
   Version="8">
-  <!--Chaque nÅ“ud ci-dessous contiendra des propriÃ©tÃ©s qui n'affectent pas le comportement d'exÃ©cution.-->
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1242,7 +1242,7 @@
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="197.6,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es"
+          Id="Package\Tâche de flux de données"
           TopLeft="104.999995827675,146.466667830679" />
         <NodeLayout
           Size="120.8,41.6"
@@ -1286,36 +1286,36 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\TÃ¢che de flux de donnÃ©es">
+    design-time-name="Package\Tâche de flux de données">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="100,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Trier"
+          Id="Package\Tâche de flux de données\Trier"
           TopLeft="174.999993046125,300.733335723347" />
         <NodeLayout
           Size="170.4,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Table de caractÃ¨res"
+          Id="Package\Tâche de flux de données\Table de caractères"
           TopLeft="146.666660838657,113.533334235615" />
         <NodeLayout
           Size="187.2,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident"
+          Id="Package\Tâche de flux de données\vue_condition_accident"
           TopLeft="126.666661633386,52.0000004132589" />
         <NodeLayout
           Size="171.2,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB"
+          Id="Package\Tâche de flux de données\Destination OLE DB"
           TopLeft="164.999993443489,370.60000266552" />
         <NodeLayout
           Size="188,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es"
+          Id="Package\Tâche de flux de données\Conversion de données"
           TopLeft="134.166661335363,234.000001859665" />
         <NodeLayout
           Size="154.4,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e"
+          Id="Package\Tâche de flux de données\Colonne dérivée"
           TopLeft="147.499994138877,173.333334710863" />
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de colonne dÃ©rivÃ©e]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
           TopLeft="147.499994138877,194.133334710863">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1351,7 +1351,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de tri]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de tri]"
           TopLeft="224.999993046125,342.333335723347">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1387,7 +1387,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de source OLE DB]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de source OLE DB]"
           TopLeft="126.666661633386,72.8000004132589">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1423,7 +1423,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de la table de caractÃ¨res]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de la table de caractères]"
           TopLeft="317.066660838657,134.333334235615">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1459,7 +1459,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de conversion de donnÃ©es]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
           TopLeft="226.583327190744,275.600001859665">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1486,7 +1486,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\TÃ¢che de flux de donnÃ©es\vue_condition_accident">
+    design-time-name="Package\Tâche de flux de données\vue_condition_accident">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1499,7 +1499,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB">
+    design-time-name="Package\Tâche de flux de données\Destination OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

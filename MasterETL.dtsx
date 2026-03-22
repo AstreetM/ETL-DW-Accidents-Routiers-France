@@ -1,10 +1,10 @@
-ï»¿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="3/22/2026 11:16:42 AM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="PCASTRIT"
-  DTS:CreatorName="PCASTRIT\astri"
+  DTS:CreatorComputerName="ANONYME"
+  DTS:CreatorName="ANONYME"
   DTS:DTSID="{45B44EC1-023B-4C1A-8B19-2033EA6D313C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
@@ -18,19 +18,19 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Conteneur de sÃ©quences"
+      DTS:refId="Package\Conteneur de séquences"
       DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Conteneur de sÃ©quences"
+      DTS:Description="Conteneur de séquences"
       DTS:DTSID="{5B21DFC6-9921-432D-82FE-4AE2D34F7CE6}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Conteneur de sÃ©quences">
+      DTS:ObjectName="Conteneur de séquences">
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_Collision"
+          DTS:refId="Package\Conteneur de séquences\Dim_Collision"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{25FB2F7C-8776-4C46-9E04-F83AFCC3998D}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -45,9 +45,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_ConditionsAccident"
+          DTS:refId="Package\Conteneur de séquences\Dim_ConditionsAccident"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{549BA4A4-EB21-489C-BC6B-3769EF76A24A}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -62,9 +62,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_Conducteur"
+          DTS:refId="Package\Conteneur de séquences\Dim_Conducteur"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{BE0CF569-A232-46FB-AB57-E8526F82CAAD}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -79,9 +79,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_ProfilVictime"
+          DTS:refId="Package\Conteneur de séquences\Dim_ProfilVictime"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{A730A2DC-81BA-4517-A80E-4A57273EFF85}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -96,9 +96,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_Radar"
+          DTS:refId="Package\Conteneur de séquences\Dim_Radar"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{3FE718DB-263B-4F39-B41B-A643E8CD2205}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -113,9 +113,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_Topographie"
+          DTS:refId="Package\Conteneur de séquences\Dim_Topographie"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{960473F8-CED9-4207-9EAD-0959C62A8A5D}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -130,9 +130,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\Dim_TypeVehicule"
+          DTS:refId="Package\Conteneur de séquences\Dim_TypeVehicule"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{A850840F-BBA8-4CBE-9E0E-9599CDDAD210}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -147,9 +147,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\FactAccident"
+          DTS:refId="Package\Conteneur de séquences\FactAccident"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{2D3EFF04-6A65-43AB-BFF4-75D0D4C55B11}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -164,9 +164,9 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Conteneur de sÃ©quences\FactVehicule"
+          DTS:refId="Package\Conteneur de séquences\FactVehicule"
           DTS:CreationName="Microsoft.ExecutePackageTask"
-          DTS:Description="TÃ¢che d'exÃ©cution de package"
+          DTS:Description="Tâche d'exécution de package"
           DTS:DTSID="{92399042-B2E9-4908-B1DD-98313367F0D5}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
@@ -183,79 +183,79 @@
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte]"
           DTS:CreationName=""
           DTS:DTSID="{17064F7E-99CD-45DE-A3F3-264A1A82E88C}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_ConditionsAccident"
+          DTS:From="Package\Conteneur de séquences\Dim_ConditionsAccident"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte"
-          DTS:To="Package\Conteneur de sÃ©quences\Dim_Topographie" />
+          DTS:To="Package\Conteneur de séquences\Dim_Topographie" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 1]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 1]"
           DTS:CreationName=""
           DTS:DTSID="{1D5E6F8A-DA89-419A-991F-258982BCEDA1}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_Topographie"
+          DTS:From="Package\Conteneur de séquences\Dim_Topographie"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 1"
-          DTS:To="Package\Conteneur de sÃ©quences\Dim_TypeVehicule" />
+          DTS:To="Package\Conteneur de séquences\Dim_TypeVehicule" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 2]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 2]"
           DTS:CreationName=""
           DTS:DTSID="{7B6CB1AE-E27C-4F5B-84D3-8906813FCE3D}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_TypeVehicule"
+          DTS:From="Package\Conteneur de séquences\Dim_TypeVehicule"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 2"
-          DTS:To="Package\Conteneur de sÃ©quences\Dim_Collision" />
+          DTS:To="Package\Conteneur de séquences\Dim_Collision" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 3]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 3]"
           DTS:CreationName=""
           DTS:DTSID="{C105A844-7412-4798-9317-D78023448C5E}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_Collision"
+          DTS:From="Package\Conteneur de séquences\Dim_Collision"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 3"
-          DTS:To="Package\Conteneur de sÃ©quences\Dim_Conducteur" />
+          DTS:To="Package\Conteneur de séquences\Dim_Conducteur" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 4]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 4]"
           DTS:CreationName=""
           DTS:DTSID="{D60FFCC2-C789-49F1-9EB6-C470EE9B1C2F}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_Conducteur"
+          DTS:From="Package\Conteneur de séquences\Dim_Conducteur"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 4"
-          DTS:To="Package\Conteneur de sÃ©quences\Dim_ProfilVictime" />
+          DTS:To="Package\Conteneur de séquences\Dim_ProfilVictime" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 5]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 5]"
           DTS:CreationName=""
           DTS:DTSID="{2ED77BC2-495A-46E7-A9F1-C7E0234D68CB}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_ProfilVictime"
+          DTS:From="Package\Conteneur de séquences\Dim_ProfilVictime"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 5"
-          DTS:To="Package\Conteneur de sÃ©quences\Dim_Radar" />
+          DTS:To="Package\Conteneur de séquences\Dim_Radar" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 6]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 6]"
           DTS:CreationName=""
           DTS:DTSID="{F193D5D3-5FF6-4DE7-8FC5-FD5CB23830DB}"
-          DTS:From="Package\Conteneur de sÃ©quences\Dim_Radar"
+          DTS:From="Package\Conteneur de séquences\Dim_Radar"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 6"
-          DTS:To="Package\Conteneur de sÃ©quences\FactAccident" />
+          DTS:To="Package\Conteneur de séquences\FactAccident" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 7]"
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 7]"
           DTS:CreationName=""
           DTS:DTSID="{CEC4F895-67E6-499A-8732-0B21A48631ED}"
-          DTS:From="Package\Conteneur de sÃ©quences\FactAccident"
+          DTS:From="Package\Conteneur de séquences\FactAccident"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Contrainte 7"
-          DTS:To="Package\Conteneur de sÃ©quences\FactVehicule" />
+          DTS:To="Package\Conteneur de séquences\FactVehicule" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnÃ©es (x,y), la largeur et la hauteur.-->
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
 <!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition prÃ©cÃ©dente seront perdues et le concepteur rÃ©organisera automatiquement les Ã©lÃ©ments sur l'aire de conception.-->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
 <Objects
   Version="8">
-  <!--Chaque nÅ“ud ci-dessous contiendra des propriÃ©tÃ©s qui n'affectent pas le comportement d'exÃ©cution.-->
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -263,42 +263,42 @@
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="192,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_ConditionsAccident"
+          Id="Package\Conteneur de séquences\Dim_ConditionsAccident"
           TopLeft="28,5.5" />
         <NodeLayout
           Size="160.8,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_Topographie"
+          Id="Package\Conteneur de séquences\Dim_Topographie"
           TopLeft="38.7142852885383,59.3809543596751" />
         <NodeLayout
           Size="165.6,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_TypeVehicule"
+          Id="Package\Conteneur de séquences\Dim_TypeVehicule"
           TopLeft="49.4285705770765,123.019050103521" />
         <NodeLayout
           Size="134.4,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_Collision"
+          Id="Package\Conteneur de séquences\Dim_Collision"
           TopLeft="59.6666654083464,183.438098202736" />
         <NodeLayout
           Size="156.8,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_Conducteur"
+          Id="Package\Conteneur de séquences\Dim_Conducteur"
           TopLeft="37.5238091453673,245.219051074679" />
         <NodeLayout
           Size="160.8,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_ProfilVictime"
+          Id="Package\Conteneur de séquences\Dim_ProfilVictime"
           TopLeft="29.3142692946259,305.066669752333" />
         <NodeLayout
           Size="131.2,41.6"
-          Id="Package\Conteneur de sÃ©quences\Dim_Radar"
+          Id="Package\Conteneur de séquences\Dim_Radar"
           TopLeft="48.8380780426289,360.647622314332" />
         <NodeLayout
           Size="138.4,41.6"
-          Id="Package\Conteneur de sÃ©quences\FactAccident"
+          Id="Package\Conteneur de séquences\FactAccident"
           TopLeft="43.2428401697255,415.847622396984" />
         <NodeLayout
           Size="138.4,41.6"
-          Id="Package\Conteneur de sÃ©quences\FactVehicule"
+          Id="Package\Conteneur de séquences\FactVehicule"
           TopLeft="44.8797448665855,478.080955754424" />
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte]"
           TopLeft="220,26.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -332,7 +332,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 1]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 1]"
           TopLeft="38.7142852885383,80.1809543596751">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -366,7 +366,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 2]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 2]"
           TopLeft="215.028570577076,143.819050103521">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -400,7 +400,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 3]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 3]"
           TopLeft="194.066665408346,209.838098202736">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -434,7 +434,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 4]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 4]"
           TopLeft="194.323809145367,271.619051074679">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -468,7 +468,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 5]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 5]"
           TopLeft="29.3142692946259,325.866669752333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -502,7 +502,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 6]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 6]"
           TopLeft="180.038078042629,381.447622314332">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -536,7 +536,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Conteneur de sÃ©quences.PrecedenceConstraints[Contrainte 7]"
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 7]"
           TopLeft="43.2428401697255,436.647622396984">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -574,7 +574,7 @@
           IsExpanded="True"
           PanelSize="246.4,592"
           Size="246.4,635.2"
-          Id="Package\Conteneur de sÃ©quences"
+          Id="Package\Conteneur de séquences"
           TopLeft="289.047607561899,36.852378326219" />
       </GraphLayout>
     </LayoutInfo>

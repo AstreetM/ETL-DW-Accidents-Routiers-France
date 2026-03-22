@@ -1,10 +1,10 @@
-ï»¿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="3/21/2026 2:26:58 PM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="PCASTRIT"
-  DTS:CreatorName="PCASTRIT\astri"
+  DTS:CreatorComputerName="ANONYME"
+  DTS:CreatorName="ANONYME"
   DTS:DTSID="{845687CA-147B-4F52-8877-74D5E6F3B0C2}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=dw_relationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{D3CAEC96-1903-4A4A-B93B-E46DF61F91B0}PCASTRIT.dw_relationalAccident;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ANONYME;Initial Catalog=dw_relationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{D3CAEC96-1903-4A4A-B93B-E46DF61F91B0}ANONYME.dw_relationalAccident;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{8FF7AA8C-54EE-488D-9A85-AE273B2DF8B6}PCASTRIT.RelationalAccident;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ANONYME;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{8FF7AA8C-54EE-488D-9A85-AE273B2DF8B6}ANONYME.RelationalAccident;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -46,7 +46,7 @@
     <DTS:Executable
       DTS:refId="Package\vueDimConducteur"
       DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="TÃ¢che de flux de donnÃ©es"
+      DTS:Description="Tâche de flux de données"
       DTS:DTSID="{53BCD100-AD57-4418-9A6E-5120F624579A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -58,55 +58,55 @@
           version="1">
           <components>
             <component
-              refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e"
+              refId="Package\vueDimConducteur\Colonne dérivée"
               componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dÃ©rivÃ©e;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="CrÃ©e de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrÃ©e de transformation. CrÃ©ez de nouvelles colonnes ou remplacez celles qui existent dÃ©jÃ . Par exemple, concatÃ©nez les valeurs de la colonne 'prÃ©nom' et de la colonne 'nom' pour crÃ©er une colonne 'nom complet'."
-              name="Colonne dÃ©rivÃ©e"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-                  description="EntrÃ©e de la transformation de colonnes dÃ©rivÃ©es"
-                  name="EntrÃ©e de colonne dÃ©rivÃ©e">
+                  refId="Package\vueDimConducteur\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e].Columns[Copy of sexe]"
+                      refId="Package\vueDimConducteur\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of sexe"
-                      lineageId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]" />
+                      lineageId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e]"
-                  description="Sortie par dÃ©faut de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
-                  name="Sortie de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\vueDimConducteur\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[sexe_deriv]"
+                      refId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[sexe_deriv]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="102"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[sexe_deriv]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[sexe_deriv]"
                       name="sexe_deriv"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
-                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]},1,1)) + [SUBSTRING](#{Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]},2,[LEN](#{Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]})),"NC")</property>
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]},1,1)) + [SUBSTRING](#{Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]},2,[LEN](#{Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]})),"NC")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of sexe],1,1)) + SUBSTRING([Copy of sexe],2,LEN([Copy of sexe])),"NC")</property>
                       </properties>
@@ -115,23 +115,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e]"
-                  description="Sortie d'erreur de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\vueDimConducteur\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      refId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      refId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -140,47 +140,47 @@
               </outputs>
             </component>
             <component
-              refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1"
+              refId="Package\vueDimConducteur\Colonne dérivée 1"
               componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dÃ©rivÃ©e;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="CrÃ©e de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrÃ©e de transformation. CrÃ©ez de nouvelles colonnes ou remplacez celles qui existent dÃ©jÃ . Par exemple, concatÃ©nez les valeurs de la colonne 'prÃ©nom' et de la colonne 'nom' pour crÃ©er une colonne 'nom complet'."
-              name="Colonne dÃ©rivÃ©e 1"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée 1"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-                  description="EntrÃ©e de la transformation de colonnes dÃ©rivÃ©es"
-                  name="EntrÃ©e de colonne dÃ©rivÃ©e">
+                  refId="Package\vueDimConducteur\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie de colonne dÃ©rivÃ©e]"
-                  description="Sortie par dÃ©faut de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
-                  name="Sortie de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\vueDimConducteur\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[date_fin]"
+                      refId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[date_fin]"
                       dataType="dbTimeStamp"
                       description="date_fin"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[date_fin]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[date_fin]"
                       name="date_fin"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
+                          description="Expression de colonne dérivée"
                           name="Expression">(DT_DBTIMESTAMP)(@[System::ContainerStartTime])</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">(DT_DBTIMESTAMP)(@[System::ContainerStartTime])</property>
                       </properties>
@@ -189,23 +189,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e]"
-                  description="Sortie d'erreur de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\vueDimConducteur\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      refId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      refId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -214,47 +214,47 @@
               </outputs>
             </component>
             <component
-              refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2"
+              refId="Package\vueDimConducteur\Colonne dérivée 2"
               componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dÃ©rivÃ©e;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="CrÃ©e de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrÃ©e de transformation. CrÃ©ez de nouvelles colonnes ou remplacez celles qui existent dÃ©jÃ . Par exemple, concatÃ©nez les valeurs de la colonne 'prÃ©nom' et de la colonne 'nom' pour crÃ©er une colonne 'nom complet'."
-              name="Colonne dÃ©rivÃ©e 2"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée 2"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-                  description="EntrÃ©e de la transformation de colonnes dÃ©rivÃ©es"
-                  name="EntrÃ©e de colonne dÃ©rivÃ©e">
+                  refId="Package\vueDimConducteur\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie de colonne dÃ©rivÃ©e]"
-                  description="Sortie par dÃ©faut de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
-                  name="Sortie de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\vueDimConducteur\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[date_debut]"
+                      refId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[date_debut]"
                       dataType="dbTimeStamp"
                       description="date_debut"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[date_debut]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[date_debut]"
                       name="date_debut"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
+                          description="Expression de colonne dérivée"
                           name="Expression">(DT_DBTIMESTAMP)(@[System::ContainerStartTime])</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">(DT_DBTIMESTAMP)(@[System::ContainerStartTime])</property>
                       </properties>
@@ -263,23 +263,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e]"
-                  description="Sortie d'erreur de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\vueDimConducteur\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      refId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      refId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -290,25 +290,25 @@
             <component
               refId="Package\vueDimConducteur\Commande OLE DB"
               componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;2"
-              description="ExÃ©cute une instruction SQL pour chaque ligne d'un flux de donnÃ©es. Par exemple, appelez une procÃ©dure stockÃ©e 'nouvelle configuration d'employÃ©' pour chaque ligne de la table 'nouveaux employÃ©s'. RemarqueÂ : l'exÃ©cution d'une instruction SQL pour chaque ligne d'un flux de donnÃ©es volumineux peut prendre beaucoup de temps."
+              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, appelez une procédure stockée 'nouvelle configuration d'employé' pour chaque ligne de la table 'nouveaux employés'. Remarque : l'exécution d'une instruction SQL pour chaque ligne d'un flux de données volumineux peut prendre beaucoup de temps."
               name="Commande OLE DB"
               usesDispositions="true"
               version="2">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dw].[DimConducteur] SET [date_fin] = ? WHERE [conducteur_business_key] = ? AND [date_fin] IS NULL</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
               </properties>
               <connections>
@@ -316,54 +316,54 @@
                   refId="Package\vueDimConducteur\Commande OLE DB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[destination]"
                   connectionManagerRefId="Package.ConnectionManagers[destination]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB]"
-                  errorOrTruncationOperation="ExÃ©cution de commande"
+                  refId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB]"
+                  errorOrTruncationOperation="Exécution de commande"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="EntrÃ©e de commande OLE DB">
+                  name="Entrée de commande OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[Copy of conducteur_business_key]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB].Columns[date_fin]"
+                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB].Columns[date_fin]"
                       cachedDataType="dbTimeStamp"
                       cachedName="date_fin"
-                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_0]"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[date_fin]" />
+                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[date_fin]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_0]"
+                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
                       dataType="dbTimeStamp"
                       name="Param_0">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="Informations de paramÃ¨tre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
                           name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_1]"
+                      refId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       dataType="wstr"
                       length="50"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="Informations de paramÃ¨tre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
                           name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
@@ -375,7 +375,7 @@
                   refId="Package\vueDimConducteur\Commande OLE DB.Outputs[Sortie de commande OLE DB]"
                   exclusionGroup="1"
                   name="Sortie de commande OLE DB"
-                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB]">
+                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB]">
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -383,7 +383,7 @@
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de commande OLE DB"
-                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB]">
+                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB]">
                   <outputColumns>
                     <outputColumn
                       refId="Package\vueDimConducteur\Commande OLE DB.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
@@ -405,25 +405,25 @@
             <component
               refId="Package\vueDimConducteur\Commande OLE DB 1"
               componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;2"
-              description="ExÃ©cute une instruction SQL pour chaque ligne d'un flux de donnÃ©es. Par exemple, appelez une procÃ©dure stockÃ©e 'nouvelle configuration d'employÃ©' pour chaque ligne de la table 'nouveaux employÃ©s'. RemarqueÂ : l'exÃ©cution d'une instruction SQL pour chaque ligne d'un flux de donnÃ©es volumineux peut prendre beaucoup de temps."
+              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, appelez une procédure stockée 'nouvelle configuration d'employé' pour chaque ligne de la table 'nouveaux employés'. Remarque : l'exécution d'une instruction SQL pour chaque ligne d'un flux de données volumineux peut prendre beaucoup de temps."
               name="Commande OLE DB 1"
               usesDispositions="true"
               version="2">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dw].[DimConducteur] SET [sexe] = ?,[tranche_age] = ? WHERE [conducteur_business_key] = ?</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
               </properties>
               <connections>
@@ -431,77 +431,77 @@
                   refId="Package\vueDimConducteur\Commande OLE DB 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[destination]"
                   connectionManagerRefId="Package.ConnectionManagers[destination]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB]"
-                  errorOrTruncationOperation="ExÃ©cution de commande"
+                  refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB]"
+                  errorOrTruncationOperation="Exécution de commande"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="EntrÃ©e de commande OLE DB">
+                  name="Entrée de commande OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[Copy of conducteur_business_key]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].Columns[sexe_final]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="sexe_final"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_0]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[sexe_final]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].Columns[tranche_ageFinal]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="tranche_ageFinal"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[tranche_ageFinal]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_0]"
+                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
                       dataType="wstr"
                       length="20"
                       name="Param_0">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="Informations de paramÃ¨tre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
                           name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_1]"
+                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
                       dataType="wstr"
                       length="50"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="Informations de paramÃ¨tre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
                           name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB].ExternalColumns[Param_2]"
+                      refId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
                       dataType="wstr"
                       length="50"
                       name="Param_2">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="Informations de paramÃ¨tre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
                           name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
@@ -513,7 +513,7 @@
                   refId="Package\vueDimConducteur\Commande OLE DB 1.Outputs[Sortie de commande OLE DB]"
                   exclusionGroup="1"
                   name="Sortie de commande OLE DB"
-                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB]">
+                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB]">
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -521,7 +521,7 @@
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de commande OLE DB"
-                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB]">
+                  synchronousInputId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB]">
                   <outputColumns>
                     <outputColumn
                       refId="Package\vueDimConducteur\Commande OLE DB 1.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
@@ -541,31 +541,31 @@
               </outputs>
             </component>
             <component
-              refId="Package\vueDimConducteur\Conversion de donnÃ©es"
+              refId="Package\vueDimConducteur\Conversion de données"
               componentClassID="Microsoft.DataConvert"
-              contactInfo="Conversion de donnÃ©es;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="Conversion de donnÃ©es"
-              name="Conversion de donnÃ©es"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]"
-                  name="EntrÃ©e de conversion de donnÃ©es">
+                  refId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[sexe_deriv]"
+                      refId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données].Columns[sexe_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="sexe_deriv"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[sexe_deriv]" />
+                      lineageId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[sexe_deriv]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[tranche_age]"
+                      refId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données].Columns[tranche_age]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="tranche_age"
                       lineageId="Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[tranche_age]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données].Columns[conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="conducteur_business_key"
@@ -576,71 +576,71 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es]"
+                  refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données]"
                   exclusionGroup="1"
-                  name="Sortie de conversion de donnÃ©es"
-                  synchronousInputId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]">
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[sexe_final]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="20"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[sexe_final]"
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[sexe_final]"
                       name="sexe_final"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[sexe_deriv]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[sexe_deriv]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[tranche_ageFinal]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[tranche_ageFinal]"
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[tranche_ageFinal]"
                       name="tranche_ageFinal"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
                           name="SourceInputColumnLineageID">#{Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[tranche_age]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of conducteur_business_key]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of conducteur_business_key]"
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of conducteur_business_key]"
                       name="Copy of conducteur_business_key"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
                           name="SourceInputColumnLineageID">#{Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[conducteur_business_key]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
@@ -648,22 +648,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es]"
+                  refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de conversion de donnÃ©es"
-                  synchronousInputId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]">
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorCode]"
+                      refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorCode]"
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorColumn]"
+                      refId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorColumn]"
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -674,7 +674,7 @@
             <component
               refId="Package\vueDimConducteur\Destination d'insertion"
               componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;4"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
               description="Destination OLE DB"
               name="Destination d'insertion"
               usesDispositions="true"
@@ -682,49 +682,49 @@
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowset">[dw].[DimConducteur]</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la variable contenant le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriÃ©tÃ© DefaultCodePage lors de la description des donnÃ©es caractÃ¨res."
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
                   name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le mode utilisÃ© pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les valeurs fournies pour les colonnes d'identitÃ© seront copiÃ©es Ã  la destination. Si la valeur est dÃ©finie Ã  False, les valeurs des colonnes d'identitÃ© seront gÃ©nÃ©rÃ©es automatiquement Ã  la destination. Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiÃ©e Ã  la destination. Si la valeur est dÃ©finie Ã  False, les colonnes contenant la valeur NULL auront leurs valeurs par dÃ©faut insÃ©rÃ©es Ã  la destination. Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie les options Ã  utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie quand les validations sont Ã©mises pendant l'insertion des donnÃ©es.  Une valeur Ã©gale Ã Â 0 spÃ©cifie qu'une validation sera Ã©mise Ã  la fin de l'insertion des donnÃ©es.  Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadMaxInsertCommitSize">2147483647</property>
               </properties>
               <connections>
@@ -732,72 +732,72 @@
                   refId="Package\vueDimConducteur\Destination d'insertion.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[destination]"
                   connectionManagerRefId="Package.ConnectionManagers[destination]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB]"
-                  errorOrTruncationOperation="InsÃ©rer"
+                  refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="EntrÃ©e de destination OLE DB">
+                  name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
-                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[conducteur_business_key]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[conducteur_business_key]"
                       lineageId="Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[Copy of conducteur_business_key]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].Columns[sexe_final]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="sexe_final"
-                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[sexe]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[sexe]"
                       lineageId="Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe_final]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].Columns[tranche_ageFinal]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="tranche_ageFinal"
-                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[tranche_age]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[tranche_age]"
                       lineageId="Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[tranche_ageFinal]" />
                     <inputColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].Columns[date_debut]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].Columns[date_debut]"
                       cachedDataType="dbTimeStamp"
                       cachedName="date_debut"
-                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[date_debut]"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[date_debut]" />
+                      externalMetadataColumnId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[date_debut]"
+                      lineageId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[date_debut]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[conducteur_key]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[conducteur_key]"
                       dataType="i4"
                       name="conducteur_key" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[conducteur_business_key]"
                       dataType="wstr"
                       length="50"
                       name="conducteur_business_key" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[sexe]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[sexe]"
                       dataType="wstr"
                       length="20"
                       name="sexe" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[tranche_age]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[tranche_age]"
                       dataType="wstr"
                       length="50"
                       name="tranche_age" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[date_debut]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[date_debut]"
                       dataType="dbTimeStamp"
                       name="date_debut" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[date_fin]"
+                      refId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB].ExternalColumns[date_fin]"
                       dataType="dbTimeStamp"
                       name="date_fin" />
                   </externalMetadataColumns>
@@ -809,7 +809,7 @@
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB]">
+                  synchronousInputId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB]">
                   <outputColumns>
                     <outputColumn
                       refId="Package\vueDimConducteur\Destination d'insertion.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
@@ -829,72 +829,72 @@
               </outputs>
             </component>
             <component
-              refId="Package\vueDimConducteur\Dimension Ã  variation lente"
+              refId="Package\vueDimConducteur\Dimension à variation lente"
               componentClassID="Microsoft.SCD"
-              contactInfo="Dimension Ã  variation lente;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;3"
-              description="Met Ã  jour une dimension d'entrepÃ´t de donnÃ©es (Data Warehouse) SQL Server Analysis Services. Mettez Ã  jour les enregistrements de dimension qui sont dÃ©jÃ  prÃ©sents et insÃ©rez ceux qui ne le sont pas. Par exemple, mettez Ã  jour la table DimProduct de la base de donnÃ©es OLAP AdventureWorksDW avec les donnÃ©es de la table Products dans la base de donnÃ©es OLTP AdventureWorks."
-              name="Dimension Ã  variation lente"
+              contactInfo="Dimension à variation lente;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;3"
+              description="Met à jour une dimension d'entrepôt de données (Data Warehouse) SQL Server Analysis Services. Mettez à jour les enregistrements de dimension qui sont déjà présents et insérez ceux qui ne le sont pas. Par exemple, mettez à jour la table DimProduct de la base de données OLAP AdventureWorksDW avec les données de la table Products dans la base de données OLTP AdventureWorks."
+              name="Dimension à variation lente"
               version="3">
               <properties>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie l'instruction SELECT utilisÃ©e pour crÃ©er un ensemble de lignes du schÃ©ma."
+                  description="Spécifie l'instruction SELECT utilisée pour créer un ensemble de lignes du schéma."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [conducteur_business_key], [sexe], [tranche_age],[date_debut],[date_fin] FROM [dw].[DimConducteur]</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la clause WHERE dans l'instruction SELECT qui sÃ©lectionne la ligne actuelle parmi les lignes comportant des clÃ©s de travail identiques."
+                  description="Spécifie la clause WHERE dans l'instruction SELECT qui sélectionne la ligne actuelle parmi les lignes comportant des clés de travail identiques."
                   name="CurrentRowWhere">[date_debut] IS NOT NULL AND [date_fin] IS NULL</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les mises Ã  jour d'attribut d'historique sont dirigÃ©es sur la sortie de la transformation pour les mises Ã  jour d'attribut de validation."
+                  description="Indique si les mises à jour d'attribut d'historique sont dirigées sur la sortie de la transformation pour les mises à jour d'attribut de validation."
                   name="UpdateChangingAttributeHistory">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si la transformation Ã©choue lorsque les colonnes comportant des attributs fixes contiennent des modifications."
+                  description="Indique si la transformation échoue lorsque les colonnes comportant des attributs fixes contiennent des modifications."
                   name="FailOnFixedAttributeChange">true</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de la colonne pour le membre dÃ©duit."
+                  description="Spécifie le nom de la colonne pour le membre déduit."
                   name="InferredMemberIndicator"></property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les mises Ã  jour de membre dÃ©duit sont dÃ©tectÃ©es."
+                  description="Indique si les mises à jour de membre déduit sont détectées."
                   name="EnableInferredMember">true</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si la transformation Ã©choue lorsque la recherche d'un enregistrement existant Ã©choue."
+                  description="Indique si la transformation échoue lorsque la recherche d'un enregistrement existant échoue."
                   name="FailOnLookupFailure">false</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie que toutes les lignes de l'entrÃ©e sont nouvelles ou que la transformation dÃ©tecte le type de modification."
+                  description="Spécifie que toutes les lignes de l'entrée sont nouvelles ou que la transformation détecte le type de modification."
                   name="IncomingRowChangeType"
                   typeConverter="IncomingRowChangeType">1</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Connections[LookupConnection]"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Connections[LookupConnection]"
                   connectionManagerID="Package.ConnectionManagers[destination]"
                   connectionManagerRefId="Package.ConnectionManagers[destination]"
-                  description="DÃ©finit la connexion Ã  utiliser pour faire des recherches dans la table de dimension"
+                  description="Définit la connexion à utiliser pour faire des recherches dans la table de dimension"
                   name="LookupConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]"
-                  name="EntrÃ©e de dimension Ã  variation lente">
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]"
+                  name="Entrée de dimension à variation lente">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[conducteur_business_key]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[conducteur_business_key]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[Copy of conducteur_business_key]">
                       <properties>
                         <property
@@ -904,12 +904,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].Columns[sexe_final]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="sexe_final"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[sexe]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[sexe]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[sexe_final]">
                       <properties>
                         <property
@@ -919,12 +919,12 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].Columns[tranche_ageFinal]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="tranche_ageFinal"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[tranche_age]"
+                      externalMetadataColumnId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[tranche_age]"
                       lineageId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri].Columns[tranche_ageFinal]">
                       <properties>
                         <property
@@ -937,26 +937,26 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[conducteur_business_key]"
                       dataType="wstr"
                       length="50"
                       name="conducteur_business_key" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[sexe]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[sexe]"
                       dataType="wstr"
                       length="20"
                       name="sexe" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[tranche_age]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[tranche_age]"
                       dataType="wstr"
                       length="50"
                       name="tranche_age" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[date_debut]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[date_debut]"
                       dataType="dbTimeStamp"
                       name="date_debut" />
                     <externalMetadataColumn
-                      refId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente].ExternalColumns[date_fin]"
+                      refId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente].ExternalColumns[date_fin]"
                       dataType="dbTimeStamp"
                       name="date_fin" />
                   </externalMetadataColumns>
@@ -964,51 +964,51 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie inchangÃ©e]"
-                  description="Lignes inchangÃ©es"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie inchangée]"
+                  description="Lignes inchangées"
                   exclusionGroup="1"
-                  name="Sortie inchangÃ©e"
-                  synchronousInputId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]">
+                  name="Sortie inchangée"
+                  synchronousInputId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Nouvelle sortie]"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Nouvelle sortie]"
                   description="Nouvelles lignes"
                   exclusionGroup="1"
                   name="Nouvelle sortie"
-                  synchronousInputId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]">
+                  synchronousInputId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie d'attribut fixe]"
-                  description="Lignes comportant des modifications dans les colonnes marquÃ©es FixedAttribute"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie d'attribut fixe]"
+                  description="Lignes comportant des modifications dans les colonnes marquées FixedAttribute"
                   exclusionGroup="1"
                   name="Sortie d'attribut fixe"
-                  synchronousInputId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]">
+                  synchronousInputId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie de mises Ã  jour d'attribut de validation]"
-                  description="Ces lignes contiennent de nouvelles informations sur les modifications de colonnes ChangingAttribute (typeÂ 1)"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie de mises à jour d'attribut de validation]"
+                  description="Ces lignes contiennent de nouvelles informations sur les modifications de colonnes ChangingAttribute (type 1)"
                   exclusionGroup="1"
-                  name="Sortie de mises Ã  jour d'attribut de validation"
-                  synchronousInputId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]">
+                  name="Sortie de mises à jour d'attribut de validation"
+                  synchronousInputId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie d'insertions d'attribut d'historique]"
-                  description="Les modifications sur HistoricalAttribute (typeÂ 2) apparaissent dans ces nouvelles lignes"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie d'insertions d'attribut d'historique]"
+                  description="Les modifications sur HistoricalAttribute (type 2) apparaissent dans ces nouvelles lignes"
                   exclusionGroup="2"
                   name="Sortie d'insertions d'attribut d'historique"
-                  synchronousInputId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]">
+                  synchronousInputId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie de mises Ã  jour de membre dÃ©duit]"
-                  description="Information de mise Ã  jour de ligne de dimension initiale non remplie"
+                  refId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie de mises à jour de membre déduit]"
+                  description="Information de mise à jour de ligne de dimension initiale non remplie"
                   exclusionGroup="1"
-                  name="Sortie de mises Ã  jour de membre dÃ©duit"
-                  synchronousInputId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]">
+                  name="Sortie de mises à jour de membre déduit"
+                  synchronousInputId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1016,7 +1016,7 @@
             <component
               refId="Package\vueDimConducteur\Source OLE DB"
               componentClassID="Microsoft.OLEDBSource"
-              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;7"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
               description="Source OLE DB"
               name="Source OLE DB"
               usesDispositions="true"
@@ -1024,41 +1024,41 @@
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowset">[dbo].[v_dim_conducteur]</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la variable contenant le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
-                  description="Variable contenant la commande SQL Ã  exÃ©cuter."
+                  description="Variable contenant la commande SQL à exécuter."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriÃ©tÃ© DefaultCodePage lors de la description des donnÃ©es caractÃ¨res."
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
                   name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le mode utilisÃ© pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
-                  description="Mappages entre les paramÃ¨tres de la commande SQL et les variables."
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
@@ -1066,7 +1066,7 @@
                   refId="Package\vueDimConducteur\Source OLE DB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[source]"
                   connectionManagerRefId="Package.ConnectionManagers[source]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <outputs>
@@ -1165,20 +1165,20 @@
               </outputs>
             </component>
             <component
-              refId="Package\vueDimConducteur\Table de caractÃ¨res"
+              refId="Package\vueDimConducteur\Table de caractères"
               componentClassID="Microsoft.CharacterMap"
-              contactInfo="Table de caractÃ¨res;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;2"
-              description="Applique des fonctions de chaÃ®ne aux donnÃ©es caractÃ¨res. Par exemple, convertissez des donnÃ©es en majuscules en donnÃ©es en minuscules. Fonctionne uniquement sur les donnÃ©es de colonne prÃ©sentant un type chaÃ®ne."
-              name="Table de caractÃ¨res"
+              contactInfo="Table de caractères;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Applique des fonctions de chaîne aux données caractères. Par exemple, convertissez des données en majuscules en données en minuscules. Fonctionne uniquement sur les données de colonne présentant un type chaîne."
+              name="Table de caractères"
               usesDispositions="true"
               version="2">
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]"
-                  name="EntrÃ©e de la table de caractÃ¨res">
+                  refId="Package\vueDimConducteur\Table de caractères.Inputs[Entrée de la table de caractères]"
+                  name="Entrée de la table de caractères">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res].Columns[sexe]"
+                      refId="Package\vueDimConducteur\Table de caractères.Inputs[Entrée de la table de caractères].Columns[sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sexe"
@@ -1189,29 +1189,29 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res]"
+                  refId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères]"
                   exclusionGroup="1"
-                  name="Sortie de la table de caractÃ¨res"
-                  synchronousInputId="Package\vueDimConducteur\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]">
+                  name="Sortie de la table de caractères"
+                  synchronousInputId="Package\vueDimConducteur\Table de caractères.Inputs[Entrée de la table de caractères]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]"
+                      refId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]"
                       dataType="wstr"
                       errorOrTruncationOperation="Colonne de mappage"
                       length="50"
-                      lineageId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]"
+                      lineageId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]"
                       name="Copy of sexe"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.UInt32"
-                          description="SpÃ©cifie les opÃ©rations de chaÃ®nes Ã  appliquer."
+                          description="Spécifie les opérations de chaînes à appliquer."
                           name="MapFlags"
                           typeConverter="LCMappingType">256</property>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e sur laquelle s'appliquent les opÃ©rations."
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
                           name="InputColumnLineageID">#{Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[sexe]}</property>
                       </properties>
                     </outputColumn>
@@ -1219,22 +1219,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res]"
+                  refId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie d'erreur de la table de caractères]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de la table de caractÃ¨res"
-                  synchronousInputId="Package\vueDimConducteur\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]">
+                  name="Sortie d'erreur de la table de caractères"
+                  synchronousInputId="Package\vueDimConducteur\Table de caractères.Inputs[Entrée de la table de caractères]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorCode]"
+                      refId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorCode]"
+                      lineageId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorColumn]"
+                      refId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie d'erreur de la table de caractÃ¨res].Columns[ErrorColumn]"
+                      lineageId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1245,8 +1245,8 @@
             <component
               refId="Package\vueDimConducteur\Trier"
               componentClassID="Microsoft.Sort"
-              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;1"
-              description="Trie les donnÃ©es d'entrÃ©e en ordre croissant ou dÃ©croissant lorsque le tri ne peut pas Ãªtre effectuÃ© Ã  la source. Par exemple, triez les donnÃ©es de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. RemarqueÂ : nous ne recommandons pas cette transformation dans le cas de flux de donnÃ©es volumineux."
+              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
               name="Trier"
               version="1">
               <properties>
@@ -1256,17 +1256,17 @@
                   name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le nombre maximal de threads Ã  utiliser pour le tri."
+                  description="Spécifie le nombre maximal de threads à utiliser pour le tri."
                   expressionType="Notify"
                   name="MaximumThreads">-1</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri]"
-                  name="EntrÃ©e de tri">
+                  refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri]"
+                  name="Entrée de tri">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="conducteur_business_key"
@@ -1274,16 +1274,16 @@
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[sexe]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sexe"
@@ -1291,16 +1291,16 @@
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[tranche_age]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[tranche_age]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="tranche_age"
@@ -1308,96 +1308,96 @@
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of sexe]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[Copy of sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of sexe"
-                      lineageId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]">
+                      lineageId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[sexe_deriv]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[sexe_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="sexe_deriv"
-                      lineageId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[sexe_deriv]">
+                      lineageId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[sexe_deriv]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[sexe_final]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="sexe_final"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[sexe_final]">
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[sexe_final]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[tranche_ageFinal]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="tranche_ageFinal"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[tranche_ageFinal]">
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[tranche_ageFinal]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
-                      lineageId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of conducteur_business_key]">
+                      lineageId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of conducteur_business_key]">
                       <properties>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie les options de comparaison pour les donnÃ©es caractÃ¨res."
+                          description="Spécifie les options de comparaison pour les données caractères."
                           name="NewComparisonFlags">0</property>
                         <property
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'ordre de tri de la colonne."
+                          description="Spécifie l'ordre de tri de la colonne."
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
@@ -1421,7 +1421,7 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
                           name="SortColumnId">#{Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[conducteur_business_key]}</property>
                       </properties>
                     </outputColumn>
@@ -1435,7 +1435,7 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
                           name="SortColumnId">#{Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[sexe]}</property>
                       </properties>
                     </outputColumn>
@@ -1449,7 +1449,7 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
                           name="SortColumnId">#{Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[tranche_age]}</property>
                       </properties>
                     </outputColumn>
@@ -1463,8 +1463,8 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res].Columns[Copy of sexe]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of sexe]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1477,8 +1477,8 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[sexe_deriv]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[sexe_deriv]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1492,8 +1492,8 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[sexe_final]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[sexe_final]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1507,8 +1507,8 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[tranche_ageFinal]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[tranche_ageFinal]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1522,8 +1522,8 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie l'identificateur de traÃ§abilitÃ© de la colonne d'entrÃ©e associÃ© Ã  cette colonne de sortie."
-                          name="SortColumnId">#{Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of conducteur_business_key]}</property>
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of conducteur_business_key]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1534,17 +1534,17 @@
             <component
               refId="Package\vueDimConducteur\Unir tout"
               componentClassID="Microsoft.UnionAll"
-              contactInfo="Unir tout;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;1"
-              description="Combine des lignes de plusieurs flux de donnÃ©es sans effectuer de tri. Par exemple, rajoutez des lignes Ã  un flux de donnÃ©es aprÃ¨s correction des erreurs. Si le tri est important, nous recommandons l'utilisation de la transformation de fusion."
+              contactInfo="Unir tout;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Combine des lignes de plusieurs flux de données sans effectuer de tri. Par exemple, rajoutez des lignes à un flux de données après correction des erreurs. Si le tri est important, nous recommandons l'utilisation de la transformation de fusion."
               name="Unir tout"
               version="1">
               <inputs>
                 <input
-                  refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1]"
-                  name="Unir tout entrÃ©e 1">
+                  refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1]"
+                  name="Unir tout entrée 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="conducteur_business_key"
@@ -1553,12 +1553,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[conducteur_business_key]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[sexe]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sexe"
@@ -1567,12 +1567,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[tranche_age]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[tranche_age]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="tranche_age"
@@ -1581,12 +1581,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[tranche_age]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[Copy of sexe]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[Copy of sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of sexe"
@@ -1595,12 +1595,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[Copy of sexe]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[sexe_deriv]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[sexe_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="sexe_deriv"
@@ -1609,12 +1609,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe_deriv]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[sexe_final]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="sexe_final"
@@ -1624,12 +1624,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe_final]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[tranche_ageFinal]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="tranche_ageFinal"
@@ -1639,12 +1639,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[tranche_ageFinal]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
@@ -1654,7 +1654,7 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[Copy of conducteur_business_key]}</property>
                       </properties>
                     </inputColumn>
@@ -1662,12 +1662,12 @@
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1]"
+                  refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1]"
                   hasSideEffects="true"
-                  name="EntrÃ©e Union All 1">
+                  name="Entrée Union All 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="conducteur_business_key"
@@ -1676,12 +1676,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[conducteur_business_key]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[sexe]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sexe"
@@ -1690,12 +1690,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[tranche_age]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[tranche_age]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="tranche_age"
@@ -1704,12 +1704,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[tranche_age]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[Copy of sexe]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[Copy of sexe]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of sexe"
@@ -1718,12 +1718,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[Copy of sexe]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[sexe_deriv]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[sexe_deriv]"
                       cachedDataType="wstr"
                       cachedLength="102"
                       cachedName="sexe_deriv"
@@ -1732,12 +1732,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe_deriv]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[sexe_final]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[sexe_final]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="sexe_final"
@@ -1747,12 +1747,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[sexe_final]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[tranche_ageFinal]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[tranche_ageFinal]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="tranche_ageFinal"
@@ -1762,12 +1762,12 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[tranche_ageFinal]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1].Columns[Copy of conducteur_business_key]"
+                      refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1].Columns[Copy of conducteur_business_key]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of conducteur_business_key"
@@ -1777,7 +1777,7 @@
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="ID de traÃ§abilitÃ© de colonne de sortie"
+                          description="ID de traçabilité de colonne de sortie"
                           name="OutputColumnLineageID">#{Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1].Columns[Copy of conducteur_business_key]}</property>
                       </properties>
                     </inputColumn>
@@ -1785,10 +1785,10 @@
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 2]"
+                  refId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 2]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="EntrÃ©e Union All 2">
+                  name="Entrée Union All 2">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -1854,62 +1854,62 @@
           <paths>
             <path
               refId="Package\vueDimConducteur.Paths[Nouvelle sortie]"
-              endId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrÃ©e 1]"
+              endId="Package\vueDimConducteur\Unir tout.Inputs[Unir tout entrée 1]"
               name="Nouvelle sortie"
-              startId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Nouvelle sortie]" />
+              startId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Nouvelle sortie]" />
             <path
               refId="Package\vueDimConducteur.Paths[Sortie d'insertions d'attribut d'historique]"
-              endId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
+              endId="Package\vueDimConducteur\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]"
               name="Sortie d'insertions d'attribut d'historique"
-              startId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie d'insertions d'attribut d'historique]" />
+              startId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie d'insertions d'attribut d'historique]" />
             <path
-              refId="Package\vueDimConducteur.Paths[Sortie de colonne dÃ©rivÃ©e]"
-              endId="Package\vueDimConducteur\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]"
-              name="Sortie de colonne dÃ©rivÃ©e"
-              startId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e]" />
+              refId="Package\vueDimConducteur.Paths[Sortie de colonne dérivée]"
+              endId="Package\vueDimConducteur\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de colonne dérivée"
+              startId="Package\vueDimConducteur\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\vueDimConducteur.Paths[Sortie de colonne dÃ©rivÃ©e1]"
-              endId="Package\vueDimConducteur\Commande OLE DB.Inputs[EntrÃ©e de commande OLE DB]"
-              name="Sortie de colonne dÃ©rivÃ©e"
-              startId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1.Outputs[Sortie de colonne dÃ©rivÃ©e]" />
+              refId="Package\vueDimConducteur.Paths[Sortie de colonne dérivée1]"
+              endId="Package\vueDimConducteur\Commande OLE DB.Inputs[Entrée de commande OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\vueDimConducteur\Colonne dérivée 1.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\vueDimConducteur.Paths[Sortie de colonne dÃ©rivÃ©e2]"
-              endId="Package\vueDimConducteur\Destination d'insertion.Inputs[EntrÃ©e de destination OLE DB]"
-              name="Sortie de colonne dÃ©rivÃ©e"
-              startId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Outputs[Sortie de colonne dÃ©rivÃ©e]" />
+              refId="Package\vueDimConducteur.Paths[Sortie de colonne dérivée2]"
+              endId="Package\vueDimConducteur\Destination d'insertion.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\vueDimConducteur\Colonne dérivée 2.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\vueDimConducteur.Paths[Sortie de commande OLE DB]"
-              endId="Package\vueDimConducteur\Unir tout.Inputs[EntrÃ©e Union All 1]"
+              endId="Package\vueDimConducteur\Unir tout.Inputs[Entrée Union All 1]"
               name="Sortie de commande OLE DB"
               startId="Package\vueDimConducteur\Commande OLE DB.Outputs[Sortie de commande OLE DB]" />
             <path
-              refId="Package\vueDimConducteur.Paths[Sortie de conversion de donnÃ©es]"
-              endId="Package\vueDimConducteur\Trier.Inputs[EntrÃ©e de tri]"
-              name="Sortie de conversion de donnÃ©es"
-              startId="Package\vueDimConducteur\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es]" />
+              refId="Package\vueDimConducteur.Paths[Sortie de conversion de données]"
+              endId="Package\vueDimConducteur\Trier.Inputs[Entrée de tri]"
+              name="Sortie de conversion de données"
+              startId="Package\vueDimConducteur\Conversion de données.Outputs[Sortie de conversion de données]" />
             <path
-              refId="Package\vueDimConducteur.Paths[Sortie de la table de caractÃ¨res]"
-              endId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-              name="Sortie de la table de caractÃ¨res"
-              startId="Package\vueDimConducteur\Table de caractÃ¨res.Outputs[Sortie de la table de caractÃ¨res]" />
+              refId="Package\vueDimConducteur.Paths[Sortie de la table de caractères]"
+              endId="Package\vueDimConducteur\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de la table de caractères"
+              startId="Package\vueDimConducteur\Table de caractères.Outputs[Sortie de la table de caractères]" />
             <path
-              refId="Package\vueDimConducteur.Paths[Sortie de mises Ã  jour de membre dÃ©duit]"
-              endId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[EntrÃ©e de commande OLE DB]"
-              name="Sortie de mises Ã  jour de membre dÃ©duit"
-              startId="Package\vueDimConducteur\Dimension Ã  variation lente.Outputs[Sortie de mises Ã  jour de membre dÃ©duit]" />
+              refId="Package\vueDimConducteur.Paths[Sortie de mises à jour de membre déduit]"
+              endId="Package\vueDimConducteur\Commande OLE DB 1.Inputs[Entrée de commande OLE DB]"
+              name="Sortie de mises à jour de membre déduit"
+              startId="Package\vueDimConducteur\Dimension à variation lente.Outputs[Sortie de mises à jour de membre déduit]" />
             <path
               refId="Package\vueDimConducteur.Paths[Sortie de source OLE DB]"
-              endId="Package\vueDimConducteur\Table de caractÃ¨res.Inputs[EntrÃ©e de la table de caractÃ¨res]"
+              endId="Package\vueDimConducteur\Table de caractères.Inputs[Entrée de la table de caractères]"
               name="Sortie de source OLE DB"
               startId="Package\vueDimConducteur\Source OLE DB.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\vueDimConducteur.Paths[Sortie de tri]"
-              endId="Package\vueDimConducteur\Dimension Ã  variation lente.Inputs[EntrÃ©e de dimension Ã  variation lente]"
+              endId="Package\vueDimConducteur\Dimension à variation lente.Inputs[Entrée de dimension à variation lente]"
               name="Sortie de tri"
               startId="Package\vueDimConducteur\Trier.Outputs[Sortie de tri]" />
             <path
               refId="Package\vueDimConducteur.Paths[Unir tout sortie 1]"
-              endId="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
+              endId="Package\vueDimConducteur\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\vueDimConducteur\Unir tout.Outputs[Unir tout sortie 1]" />
           </paths>
@@ -1918,12 +1918,12 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnÃ©es (x,y), la largeur et la hauteur.-->
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
 <!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition prÃ©cÃ©dente seront perdues et le concepteur rÃ©organisera automatiquement les Ã©lÃ©ments sur l'aire de conception.-->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
 <Objects
   Version="8">
-  <!--Chaque nÅ“ud ci-dessous contiendra des propriÃ©tÃ©s qui n'affectent pas le comportement d'exÃ©cution.-->
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1947,7 +1947,7 @@
           TopLeft="162.9,5.49999999999995" />
         <NodeLayout
           Size="170.4,41.6"
-          Id="Package\vueDimConducteur\Table de caractÃ¨res"
+          Id="Package\vueDimConducteur\Table de caractères"
           TopLeft="153.7,107.1" />
         <EdgeLayout
           Id="Package\vueDimConducteur.Paths[Sortie de source OLE DB]"
@@ -1973,10 +1973,10 @@
         </EdgeLayout>
         <NodeLayout
           Size="154.4,41.6"
-          Id="Package\vueDimConducteur\Colonne dÃ©rivÃ©e"
+          Id="Package\vueDimConducteur\Colonne dérivée"
           TopLeft="161.7,208.7" />
         <EdgeLayout
-          Id="Package\vueDimConducteur.Paths[Sortie de la table de caractÃ¨res]"
+          Id="Package\vueDimConducteur.Paths[Sortie de la table de caractères]"
           TopLeft="238.9,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1999,10 +1999,10 @@
         </EdgeLayout>
         <NodeLayout
           Size="188,41.6"
-          Id="Package\vueDimConducteur\Conversion de donnÃ©es"
+          Id="Package\vueDimConducteur\Conversion de données"
           TopLeft="144.9,310.3" />
         <EdgeLayout
-          Id="Package\vueDimConducteur.Paths[Sortie de colonne dÃ©rivÃ©e]"
+          Id="Package\vueDimConducteur.Paths[Sortie de colonne dérivée]"
           TopLeft="238.9,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2028,7 +2028,7 @@
           Id="Package\vueDimConducteur\Trier"
           TopLeft="188.9,411.9" />
         <EdgeLayout
-          Id="Package\vueDimConducteur.Paths[Sortie de conversion de donnÃ©es]"
+          Id="Package\vueDimConducteur.Paths[Sortie de conversion de données]"
           TopLeft="238.9,351.9">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2051,7 +2051,7 @@
         </EdgeLayout>
         <NodeLayout
           Size="204,41.6"
-          Id="Package\vueDimConducteur\Dimension Ã  variation lente"
+          Id="Package\vueDimConducteur\Dimension à variation lente"
           TopLeft="136.9,513.5" />
         <EdgeLayout
           Id="Package\vueDimConducteur.Paths[Sortie de tri]"
@@ -2077,7 +2077,7 @@
         </EdgeLayout>
         <NodeLayout
           Size="162.4,41.6"
-          Id="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 1"
+          Id="Package\vueDimConducteur\Colonne dérivée 1"
           TopLeft="15.7,615.099999999999" />
         <EdgeLayout
           Id="Package\vueDimConducteur.Paths[Sortie d'insertions d'attribut d'historique]"
@@ -2120,7 +2120,7 @@
           Id="Package\vueDimConducteur\Commande OLE DB"
           TopLeft="5.50000000000003,716.699999999999" />
         <EdgeLayout
-          Id="Package\vueDimConducteur.Paths[Sortie de colonne dÃ©rivÃ©e1]"
+          Id="Package\vueDimConducteur.Paths[Sortie de colonne dérivée1]"
           TopLeft="94.4,656.699999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2217,7 +2217,7 @@
         </EdgeLayout>
         <NodeLayout
           Size="162.4,41.6"
-          Id="Package\vueDimConducteur\Colonne dÃ©rivÃ©e 2"
+          Id="Package\vueDimConducteur\Colonne dérivée 2"
           TopLeft="157.7,919.899999999999" />
         <EdgeLayout
           Id="Package\vueDimConducteur.Paths[Unir tout sortie 1]"
@@ -2246,7 +2246,7 @@
           Id="Package\vueDimConducteur\Destination d'insertion"
           TopLeft="148.5,1021.5" />
         <EdgeLayout
-          Id="Package\vueDimConducteur.Paths[Sortie de colonne dÃ©rivÃ©e2]"
+          Id="Package\vueDimConducteur.Paths[Sortie de colonne dérivée2]"
           TopLeft="238.9,961.499999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2272,7 +2272,7 @@
           Id="Package\vueDimConducteur\Commande OLE DB 1"
           TopLeft="300.1,615.099999999999" />
         <EdgeLayout
-          Id="Package\vueDimConducteur.Paths[Sortie de mises Ã  jour de membre dÃ©duit]"
+          Id="Package\vueDimConducteur.Paths[Sortie de mises à jour de membre déduit]"
           TopLeft="287.9,555.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2311,7 +2311,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\vueDimConducteur\Dimension Ã  variation lente">
+    design-time-name="Package\vueDimConducteur\Dimension à variation lente">
     <Properties>
       <Property>
         <Name>SCDMetadata</Name>
@@ -2341,10 +2341,10 @@
     &lt;/InputColumnToDBColumn&gt;
   &lt;/InputToColumnsCollection&gt;
   &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Colonne dÃ©rivÃ©e 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Colonne dérivée 1&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;Commande OLE DB&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;Unir tout&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Colonne dÃ©rivÃ©e 2&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Colonne dérivée 2&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;Destination d'insertion&lt;/anyType&gt;
     &lt;anyType xsi:type="xsd:string"&gt;Commande OLE DB 1&lt;/anyType&gt;
   &lt;/GeneratedComponentsIdentificationStrings&gt;

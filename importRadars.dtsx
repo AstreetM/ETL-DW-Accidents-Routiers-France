@@ -1,10 +1,10 @@
-ï»¿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="3/21/2026 12:47:56 PM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="PCASTRIT"
-  DTS:CreatorName="PCASTRIT\astri"
+  DTS:CreatorComputerName="ANONYME"
+  DTS:CreatorName="ANONYME"
   DTS:DTSID="{992C4BB0-A616-49DC-B12E-AB4F025718D1}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
@@ -41,28 +41,28 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[PCASTRIT.RelationalAccident]"
+      DTS:refId="Package.ConnectionManagers[ANONYME.RelationalAccident]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{CB303FBB-8042-4D24-A64D-74ABDBB54C0F}"
-      DTS:ObjectName="PCASTRIT.RelationalAccident">
+      DTS:ObjectName="ANONYME.RelationalAccident">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{CB303FBB-8042-4D24-A64D-74ABDBB54C0F}PCASTRIT.RelationalAccident;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=ANONYME;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{CB303FBB-8042-4D24-A64D-74ABDBB54C0F}ANONYME.RelationalAccident;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\TÃ¢che de flux de donnÃ©es"
+      DTS:refId="Package\Tâche de flux de données"
       DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="TÃ¢che de flux de donnÃ©es"
+      DTS:Description="Tâche de flux de données"
       DTS:DTSID="{10100B36-480B-4024-A1C1-09DE5B068BD4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="TÃ¢che de flux de donnÃ©es"
+      DTS:ObjectName="Tâche de flux de données"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -70,69 +70,69 @@
           version="1">
           <components>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e"
+              refId="Package\Tâche de flux de données\Colonne dérivée"
               componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Colonne dÃ©rivÃ©e;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="CrÃ©e de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrÃ©e de transformation. CrÃ©ez de nouvelles colonnes ou remplacez celles qui existent dÃ©jÃ . Par exemple, concatÃ©nez les valeurs de la colonne 'prÃ©nom' et de la colonne 'nom' pour crÃ©er une colonne 'nom complet'."
-              name="Colonne dÃ©rivÃ©e"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-                  description="EntrÃ©e de la transformation de colonnes dÃ©rivÃ©es"
-                  name="EntrÃ©e de colonne dÃ©rivÃ©e">
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e]"
-                  description="Sortie par dÃ©faut de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
                   exclusionGroup="1"
-                  name="Sortie de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[_load_date]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[_load_date]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[_load_date]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[_load_date]"
                       name="_load_date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
+                          description="Expression de colonne dérivée"
                           name="Expression">[GETDATE]()</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">GETDATE()</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[_source_file]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[_source_file]"
                       dataType="wstr"
                       errorOrTruncationOperation="Calcul"
                       errorRowDisposition="FailComponent"
                       length="11"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[_source_file]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[_source_file]"
                       name="_source_file"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression de colonne dÃ©rivÃ©e"
+                          description="Expression de colonne dérivée"
                           name="Expression">"radars.xlsx"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
-                          description="Expression claire de colonne dÃ©rivÃ©e"
+                          description="Expression claire de colonne dérivée"
                           expressionType="Notify"
                           name="FriendlyExpression">"radars.xlsx"</property>
                       </properties>
@@ -141,23 +141,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e]"
-                  description="Sortie d'erreur de la transformation de colonnes dÃ©rivÃ©es"
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de colonne dÃ©rivÃ©e"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]">
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie d'erreur de colonne dÃ©rivÃ©e].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -166,605 +166,605 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es"
+              refId="Package\Tâche de flux de données\Conversion de données"
               componentClassID="Microsoft.DataConvert"
-              contactInfo="Conversion de donnÃ©es;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;0"
-              description="Conversion de donnÃ©es"
-              name="Conversion de donnÃ©es"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]"
-                  name="EntrÃ©e de conversion de donnÃ©es">
+                  refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Direction]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Direction]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Direction"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[vid]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[vid]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="vid"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[vid]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[vid]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Road]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Road]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Road"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Road]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Road]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[title]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[title]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="title"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[title]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[title]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Itineraire Entree]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Itineraire Entree]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Itineraire Entree"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[revision Timestamp]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[revision Timestamp]"
                       cachedDataType="date"
                       cachedName="revision Timestamp"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Department]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Department]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Department"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Department]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Department]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Type]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Type]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Type"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Type]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Type]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Date Installation]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Date Installation]"
                       cachedDataType="date"
                       cachedName="Date Installation"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Troncon Km]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Troncon Km]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Troncon Km"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Equipment]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Equipment]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Equipment"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Place]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Place]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Place"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Place]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Place]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[radarGeolocalisation]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="radarGeolocalisation"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[rulesMesured]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[rulesMesured]"
                       cachedDataType="nText"
                       cachedName="rulesMesured"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Created]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Created]"
                       cachedDataType="date"
                       cachedName="Created"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Created]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Created]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Changed]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Changed]"
                       cachedDataType="date"
                       cachedName="Changed"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[radarType]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[radarType]"
                       cachedDataType="nText"
                       cachedName="radarType"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Itineraire Sortie]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Itineraire Sortie]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Itineraire Sortie"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Name]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Name"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Name]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Name]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Radar Type]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Radar Type]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Radar Type"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Description]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Description]"
                       cachedDataType="nText"
                       cachedName="Description"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Description]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Description]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es].Columns[Illustration]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Illustration]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Illustration"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]" />
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es]"
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]"
                   exclusionGroup="1"
-                  name="Sortie de conversion de donnÃ©es"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]">
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Direction]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Direction]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="500"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Direction]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Direction]"
                       name="Copy of Direction"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of vid]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of vid]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of vid]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of vid]"
                       name="Copy of vid"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[vid]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[vid]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Road]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Road]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Road]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Road]"
                       name="Copy of Road"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Road]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Road]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of title]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of title]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="500"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of title]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of title]"
                       name="Copy of title"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[title]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[title]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Itineraire Entree]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Itineraire Entree]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="500"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Itineraire Entree]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Itineraire Entree]"
                       name="Copy of Itineraire Entree"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of revision Timestamp]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of revision Timestamp]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of revision Timestamp]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of revision Timestamp]"
                       name="Copy of revision Timestamp"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Department]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Department]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Department]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Department]"
                       name="Copy of Department"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Department]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Department]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Type]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Type]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Type]"
                       name="Copy of Type"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Type]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Type]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Date Installation]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Date Installation]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Date Installation]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Date Installation]"
                       name="Copy of Date Installation"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Troncon Km]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Troncon Km]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Troncon Km]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Troncon Km]"
                       name="Copy of Troncon Km"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Equipment]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Equipment]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Equipment]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Equipment]"
                       name="Copy of Equipment"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Place]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Place]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Place]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Place]"
                       name="Copy of Place"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Place]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Place]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of radarGeolocalisation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of radarGeolocalisation]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of radarGeolocalisation]"
                       name="Copy of radarGeolocalisation"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of rulesMesured]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of rulesMesured]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of rulesMesured]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of rulesMesured]"
                       name="Copy of rulesMesured"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Created]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Created]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Created]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Created]"
                       name="Copy of Created"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Created]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Created]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Changed]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Changed]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Changed]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Changed]"
                       name="Copy of Changed"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of radarType]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of radarType]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of radarType]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of radarType]"
                       name="Copy of radarType"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Itineraire Sortie]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Itineraire Sortie]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="500"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Itineraire Sortie]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Itineraire Sortie]"
                       name="Copy of Itineraire Sortie"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Name]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Name]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Name]"
                       name="Copy of Name"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Name]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Name]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Radar Type]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Radar Type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Radar Type]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Radar Type]"
                       name="Copy of Radar Type"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Description]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Description]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Description]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Description]"
                       name="Copy of Description"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Description]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Description]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Illustration]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Illustration]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="500"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Illustration]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Illustration]"
                       name="Copy of Illustration"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="SpÃ©cifie la colonne d'entrÃ©e utilisÃ©e comme source de donnÃ©es pour la conversion."
-                          name="SourceInputColumnLineageID">#{Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]}</property>
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramÃ¨tres rÃ©gionaux neutres."
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
@@ -772,22 +772,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es]"
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Sortie d'erreur de conversion de donnÃ©es"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]">
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie d'erreur de conversion de donnÃ©es].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -796,9 +796,9 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB"
+              refId="Package\Tâche de flux de données\Destination OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;4"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
               description="Destination OLE DB"
               name="Destination OLE DB"
               usesDispositions="true"
@@ -806,343 +806,343 @@
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowset">[staging].[radars_raw]</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la variable contenant le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie la page de codes de la colonne Ã  utiliser lorsque les informations de page de codes ne sont pas disponibles Ã  partir de la source de donnÃ©es."
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Force l'utilisation de la valeur de propriÃ©tÃ© DefaultCodePage lors de la description des donnÃ©es caractÃ¨res."
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
                   name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le mode utilisÃ© pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les valeurs fournies pour les colonnes d'identitÃ© seront copiÃ©es Ã  la destination. Si la valeur est dÃ©finie Ã  False, les valeurs des colonnes d'identitÃ© seront gÃ©nÃ©rÃ©es automatiquement Ã  la destination. Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiÃ©e Ã  la destination. Si la valeur est dÃ©finie Ã  False, les colonnes contenant la valeur NULL auront leurs valeurs par dÃ©faut insÃ©rÃ©es Ã  la destination. Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie les options Ã  utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie quand les validations sont Ã©mises pendant l'insertion des donnÃ©es.  Une valeur Ã©gale Ã Â 0 spÃ©cifie qu'une validation sera Ã©mise Ã  la fin de l'insertion des donnÃ©es.  Ne s'applique que si le chargement rapide est activÃ©."
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
                   name="FastLoadMaxInsertCommitSize">2147483647</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PCASTRIT.RelationalAccident]"
-                  connectionManagerRefId="Package.ConnectionManagers[PCASTRIT.RelationalAccident]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ANONYME.RelationalAccident]"
+                  connectionManagerRefId="Package.ConnectionManagers[ANONYME.RelationalAccident]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB]"
-                  errorOrTruncationOperation="InsÃ©rer"
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="EntrÃ©e de destination OLE DB">
+                  name="Entrée de destination OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[_load_date]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[_load_date]"
                       cachedDataType="dbTimeStamp"
                       cachedName="_load_date"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[_load_date]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[_load_date]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[_load_date]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[_load_date]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[_source_file]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[_source_file]"
                       cachedDataType="wstr"
                       cachedLength="11"
                       cachedName="_source_file"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[_source_file]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e].Columns[_source_file]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[_source_file]"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[_source_file]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Direction]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Direction]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Copy of Direction"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Direction]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Direction]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Direction]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Direction]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of vid]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of vid]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of vid"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[vid]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of vid]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[vid]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of vid]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Road]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Road]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of Road"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Road]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Road]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Road]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Road]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of title]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of title]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Copy of title"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[title]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of title]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[title]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of title]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Itineraire Entree]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Itineraire Entree]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Copy of Itineraire Entree"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[ItineraireEntree]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Itineraire Entree]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ItineraireEntree]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Itineraire Entree]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Itineraire Sortie]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Itineraire Sortie]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Copy of Itineraire Sortie"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[ItineraireSortie]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Itineraire Sortie]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ItineraireSortie]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Itineraire Sortie]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of revision Timestamp]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of revision Timestamp]"
                       cachedDataType="date"
                       cachedName="Copy of revision Timestamp"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[revisionTime]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of revision Timestamp]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[revisionTime]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of revision Timestamp]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Department]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Department]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="Copy of Department"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Department]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Department]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Department]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Department]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Type]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Type]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of Type"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Type]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Type]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Type]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Type]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Date Installation]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Date Installation]"
                       cachedDataType="date"
                       cachedName="Copy of Date Installation"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[DateInstallation]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Date Installation]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DateInstallation]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Date Installation]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Troncon Km]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Troncon Km]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of Troncon Km"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[TronconKm]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Troncon Km]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TronconKm]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Troncon Km]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Equipment]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Equipment]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="Copy of Equipment"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Equipment]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Equipment]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Equipment]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Equipment]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Place]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Place]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="Copy of Place"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Place]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Place]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Place]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Place]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of radarGeolocalisation]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of radarGeolocalisation"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[radarGeolocalisation]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of radarGeolocalisation]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[radarGeolocalisation]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of radarGeolocalisation]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of rulesMesured]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of rulesMesured]"
                       cachedDataType="nText"
                       cachedName="Copy of rulesMesured"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[rulesMesured]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of rulesMesured]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[rulesMesured]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of rulesMesured]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Created]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Created]"
                       cachedDataType="date"
                       cachedName="Created"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Created]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Created]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Created]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Created]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Changed]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Changed]"
                       cachedDataType="date"
                       cachedName="Changed"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Changed]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Changed]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of radarType]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of radarType]"
                       cachedDataType="nText"
                       cachedName="Copy of radarType"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[radarTypeJson]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of radarType]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[radarTypeJson]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of radarType]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Radar Type]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Radar Type]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="Copy of Radar Type"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[RadarTypeLabel]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Radar Type]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RadarTypeLabel]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Radar Type]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Name]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Name]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="Copy of Name"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Name]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Name]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Name]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Name]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Description]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Description]"
                       cachedDataType="nText"
                       cachedName="Copy of Description"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Description]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Description]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Description]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Description]" />
                     <inputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].Columns[Copy of Illustration]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Copy of Illustration]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="Copy of Illustration"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Illustration]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es].Columns[Copy of Illustration]" />
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Illustration]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Illustration]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Direction]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Direction]"
                       dataType="wstr"
                       length="500"
                       name="Direction" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[vid]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[vid]"
                       dataType="wstr"
                       length="50"
                       name="vid" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Road]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Road]"
                       dataType="wstr"
                       length="100"
                       name="Road" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[title]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[title]"
                       dataType="wstr"
                       length="500"
                       name="title" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[ItineraireEntree]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ItineraireEntree]"
                       dataType="wstr"
                       length="500"
                       name="ItineraireEntree" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[ItineraireSortie]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ItineraireSortie]"
                       dataType="wstr"
                       length="500"
                       name="ItineraireSortie" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[revisionTime]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[revisionTime]"
                       dataType="wstr"
                       length="50"
                       name="revisionTime" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Department]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Department]"
                       dataType="wstr"
                       length="200"
                       name="Department" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Type]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Type]"
                       dataType="wstr"
                       length="100"
                       name="Type" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[DateInstallation]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[DateInstallation]"
                       dataType="wstr"
                       length="50"
                       name="DateInstallation" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[TronconKm]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TronconKm]"
                       dataType="wstr"
                       length="50"
                       name="TronconKm" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Equipment]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Equipment]"
                       dataType="wstr"
                       length="200"
                       name="Equipment" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Place]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Place]"
                       dataType="wstr"
                       length="200"
                       name="Place" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[radarGeolocalisation]"
                       dataType="wstr"
                       length="100"
                       name="radarGeolocalisation" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Created]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Created]"
                       dataType="wstr"
                       length="50"
                       name="Created" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Changed]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Changed]"
                       dataType="wstr"
                       length="50"
                       name="Changed" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[rulesMesured]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[rulesMesured]"
                       dataType="nText"
                       name="rulesMesured" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[radarTypeJson]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[radarTypeJson]"
                       dataType="nText"
                       name="radarTypeJson" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Name]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Name]"
                       dataType="wstr"
                       length="200"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[RadarTypeLabel]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RadarTypeLabel]"
                       dataType="wstr"
                       length="200"
                       name="RadarTypeLabel" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Description]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Description]"
                       dataType="nText"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[Illustration]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Illustration]"
                       dataType="nText"
                       name="Illustration" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[_source_file]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[_source_file]"
                       dataType="wstr"
                       length="500"
                       name="_source_file" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB].ExternalColumns[_load_date]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[_load_date]"
                       dataType="dbTimeStamp"
                       name="_load_date" />
                   </externalMetadataColumns>
@@ -1150,22 +1150,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Sortie d'erreur de destination OLE DB"
-                  synchronousInputId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB]">
+                  synchronousInputId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1174,9 +1174,9 @@
               </outputs>
             </component>
             <component
-              refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel"
+              refId="Package\Tâche de flux de données\Source Excel"
               componentClassID="Microsoft.ExcelSource"
-              contactInfo="Source Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits rÃ©servÃ©s; http://www.microsoft.com/sql/support;1"
+              contactInfo="Source Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
               description="Source Excel"
               name="Source Excel"
               usesDispositions="true"
@@ -1184,509 +1184,509 @@
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur Ã©gale Ã Â 0 indique un dÃ©lai d'expiration infini."
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowset">Sheet$</property>
                 <property
                   dataType="System.String"
-                  description="SpÃ©cifie la variable contenant le nom de l'objet de base de donnÃ©es utilisÃ© pour ouvrir un ensemble de lignes."
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="Commande SQL Ã  exÃ©cuter."
+                  description="Commande SQL à exécuter."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
-                  description="Variable contenant la commande SQL Ã  exÃ©cuter."
+                  description="Variable contenant la commande SQL à exécuter."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="SpÃ©cifie le mode utilisÃ© pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
-                  description="Mappage des paramÃ¨tres de la commande SQL en variables."
+                  description="Mappage des paramètres de la commande SQL en variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Connections[OleDbConnection]"
+                  refId="Package\Tâche de flux de données\Source Excel.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions Excel 1]"
                   connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions Excel 1]"
-                  description="Connexion OLE DB en cours d'exÃ©cution utilisÃ©e pour accÃ©der Ã  la base de donnÃ©es."
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel]"
+                  refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel]"
                   name="Sortie de source Excel">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Direction]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Direction]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Direction]"
                       name="Direction"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[vid]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[vid]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[vid]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[vid]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[vid]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[vid]"
                       name="vid"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Road]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Road]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Road]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Road]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Road]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Road]"
                       name="Road"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[title]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[title]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[title]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[title]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[title]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[title]"
                       name="title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Entree]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Entree]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Entree]"
                       name="Itineraire Entree"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[revision Timestamp]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[revision Timestamp]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[revision Timestamp]"
                       name="revision Timestamp"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Department]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Department]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Department]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Department]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Department]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Department]"
                       name="Department"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Type]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Type]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Type]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Type]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Type]"
                       name="Type"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Date Installation]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Date Installation]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Date Installation]"
                       name="Date Installation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Troncon Km]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Troncon Km]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Troncon Km]"
                       name="Troncon Km"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Equipment]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Equipment]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Equipment]"
                       name="Equipment"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Place]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Place]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Place]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Place]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Place]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Place]"
                       name="Place"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarGeolocalisation]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarGeolocalisation]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarGeolocalisation]"
                       name="radarGeolocalisation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[rulesMesured]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[rulesMesured]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[rulesMesured]"
                       name="rulesMesured"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Created]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Created]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Created]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Created]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Created]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Created]"
                       name="Created"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Changed]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Changed]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Changed]"
                       name="Changed"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarType]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarType]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[radarType]"
                       name="radarType"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Sortie]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Sortie]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Itineraire Sortie]"
                       name="Itineraire Sortie"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Name]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Name]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Name]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Name]"
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Radar Type]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Radar Type]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Radar Type]"
                       name="Radar Type"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Description]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Description]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Description]"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Description]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Description]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Description]"
                       name="Description"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Illustration]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Illustration]"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].Columns[Illustration]"
                       name="Illustration"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Direction]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Direction]"
                       dataType="wstr"
                       length="255"
                       name="Direction" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[vid]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[vid]"
                       dataType="wstr"
                       length="255"
                       name="vid" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Road]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Road]"
                       dataType="wstr"
                       length="255"
                       name="Road" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[title]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[title]"
                       dataType="wstr"
                       length="255"
                       name="title" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Entree]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Entree]"
                       dataType="wstr"
                       length="255"
                       name="Itineraire Entree" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[revision Timestamp]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[revision Timestamp]"
                       dataType="date"
                       name="revision Timestamp" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Department]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Department]"
                       dataType="wstr"
                       length="255"
                       name="Department" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Type]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Type]"
                       dataType="wstr"
                       length="255"
                       name="Type" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Date Installation]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Date Installation]"
                       dataType="date"
                       name="Date Installation" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Troncon Km]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Troncon Km]"
                       dataType="wstr"
                       length="255"
                       name="Troncon Km" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Equipment]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Equipment]"
                       dataType="wstr"
                       length="255"
                       name="Equipment" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Place]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Place]"
                       dataType="wstr"
                       length="255"
                       name="Place" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarGeolocalisation]"
                       dataType="wstr"
                       length="255"
                       name="radarGeolocalisation" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[rulesMesured]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[rulesMesured]"
                       dataType="nText"
                       name="rulesMesured" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Created]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Created]"
                       dataType="date"
                       name="Created" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Changed]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Changed]"
                       dataType="date"
                       name="Changed" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarType]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[radarType]"
                       dataType="nText"
                       name="radarType" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Sortie]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Itineraire Sortie]"
                       dataType="wstr"
                       length="255"
                       name="Itineraire Sortie" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Name]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Name]"
                       dataType="wstr"
                       length="255"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Radar Type]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Radar Type]"
                       dataType="wstr"
                       length="255"
                       name="Radar Type" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Description]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Description]"
                       dataType="nText"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Illustration]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Illustration]"
                       dataType="wstr"
                       length="255"
                       name="Illustration" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel]"
+                  refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel]"
                   isErrorOut="true"
                   name="Sortie d'erreur de source Excel">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Direction]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Direction]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Direction]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Direction]"
                       name="Direction" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[vid]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[vid]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[vid]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[vid]"
                       name="vid" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Road]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Road]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Road]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Road]"
                       name="Road" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[title]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[title]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[title]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[title]"
                       name="title" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Entree]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Entree]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Entree]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Entree]"
                       name="Itineraire Entree" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[revision Timestamp]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[revision Timestamp]"
                       dataType="date"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[revision Timestamp]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[revision Timestamp]"
                       name="revision Timestamp" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Department]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Department]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Department]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Department]"
                       name="Department" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Type]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Type]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Type]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Type]"
                       name="Type" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Date Installation]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Date Installation]"
                       dataType="date"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Date Installation]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Date Installation]"
                       name="Date Installation" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Troncon Km]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Troncon Km]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Troncon Km]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Troncon Km]"
                       name="Troncon Km" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Equipment]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Equipment]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Equipment]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Equipment]"
                       name="Equipment" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Place]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Place]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Place]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Place]"
                       name="Place" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarGeolocalisation]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarGeolocalisation]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarGeolocalisation]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarGeolocalisation]"
                       name="radarGeolocalisation" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[rulesMesured]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[rulesMesured]"
                       dataType="nText"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[rulesMesured]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[rulesMesured]"
                       name="rulesMesured" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Created]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Created]"
                       dataType="date"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Created]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Created]"
                       name="Created" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Changed]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Changed]"
                       dataType="date"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Changed]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Changed]"
                       name="Changed" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarType]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarType]"
                       dataType="nText"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarType]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[radarType]"
                       name="radarType" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Sortie]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Sortie]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Sortie]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Itineraire Sortie]"
                       name="Itineraire Sortie" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Name]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Name]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Name]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Radar Type]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Radar Type]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Radar Type]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Radar Type]"
                       name="Radar Type" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Description]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Description]"
                       dataType="nText"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Description]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Description]"
                       name="Description" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Illustration]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Illustration]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Illustration]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Illustration]"
                       name="Illustration" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
+                      refId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
+                      lineageId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1697,32 +1697,32 @@
           </components>
           <paths>
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de colonne dÃ©rivÃ©e]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB.Inputs[EntrÃ©e de destination OLE DB]"
-              name="Sortie de colonne dÃ©rivÃ©e"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Outputs[Sortie de colonne dÃ©rivÃ©e]" />
+              refId="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
+              endId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de conversion de donnÃ©es]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e.Inputs[EntrÃ©e de colonne dÃ©rivÃ©e]"
-              name="Sortie de conversion de donnÃ©es"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Outputs[Sortie de conversion de donnÃ©es]" />
+              refId="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
+              endId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de conversion de données"
+              startId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]" />
             <path
-              refId="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de source Excel]"
-              endId="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es.Inputs[EntrÃ©e de conversion de donnÃ©es]"
+              refId="Package\Tâche de flux de données.Paths[Sortie de source Excel]"
+              endId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
               name="Sortie de source Excel"
-              startId="Package\TÃ¢che de flux de donnÃ©es\Source Excel.Outputs[Sortie de source Excel]" />
+              startId="Package\Tâche de flux de données\Source Excel.Outputs[Sortie de source Excel]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnÃ©es (x,y), la largeur et la hauteur.-->
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
 <!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
-<!--Le package pourra toujours se charger normalement, mais les informations de disposition prÃ©cÃ©dente seront perdues et le concepteur rÃ©organisera automatiquement les Ã©lÃ©ments sur l'aire de conception.-->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
 <Objects
   Version="8">
-  <!--Chaque nÅ“ud ci-dessous contiendra des propriÃ©tÃ©s qui n'affectent pas le comportement d'exÃ©cution.-->
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1730,34 +1730,34 @@
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="197.6,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es"
+          Id="Package\Tâche de flux de données"
           TopLeft="182.499992748102,143.866667810016" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\TÃ¢che de flux de donnÃ©es">
+    design-time-name="Package\Tâche de flux de données">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="140,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Source Excel"
+          Id="Package\Tâche de flux de données\Source Excel"
           TopLeft="232.49999076128,75.4000005992254" />
         <NodeLayout
           Size="171.2,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB"
+          Id="Package\Tâche de flux de données\Destination OLE DB"
           TopLeft="336.666653288736,422.066670020951" />
         <NodeLayout
           Size="154.4,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Colonne dÃ©rivÃ©e"
+          Id="Package\Tâche de flux de données\Colonne dérivée"
           TopLeft="265.833322770066,251.333335330751" />
         <NodeLayout
           Size="188,41.6"
-          Id="Package\TÃ¢che de flux de donnÃ©es\Conversion de donnÃ©es"
+          Id="Package\Tâche de flux de données\Conversion de données"
           TopLeft="241.666657063696,184.600001467069" />
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de source Excel]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de source Excel]"
           TopLeft="302.49999076128,117.000000599225">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1791,7 +1791,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de conversion de donnÃ©es]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
           TopLeft="339.349989916881,226.200001467069">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1813,7 +1813,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\TÃ¢che de flux de donnÃ©es.Paths[Sortie de colonne dÃ©rivÃ©e]"
+          Id="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
           TopLeft="343.033322770066,292.933335330751">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1850,7 +1850,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\TÃ¢che de flux de donnÃ©es\Source Excel">
+    design-time-name="Package\Tâche de flux de données\Source Excel">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1863,7 +1863,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\TÃ¢che de flux de donnÃ©es\Destination OLE DB">
+    design-time-name="Package\Tâche de flux de données\Destination OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
