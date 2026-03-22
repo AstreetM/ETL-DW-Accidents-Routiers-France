@@ -1,0 +1,1999 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/21/2026 1:33:56 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PCASTRIT"
+  DTS:CreatorName="PCASTRIT\astri"
+  DTS:DTSID="{1595373D-F92A-47E0-B89D-309196F2BE8F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="2060"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{49E52CCE-4DD1-4B17-9448-2F0C419C27CE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[destination]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{91094F27-4C18-4E03-BB79-807AAA509B31}"
+      DTS:ObjectName="destination">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=dw_relationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{91094F27-4C18-4E03-BB79-807AAA509B31}PCASTRIT.dw_relationalAccident;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{85268F41-FCF1-4B9A-9782-DE2BADAFA169}"
+      DTS:ObjectName="source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PCASTRIT;Initial Catalog=RelationalAccident;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{85268F41-FCF1-4B9A-9782-DE2BADAFA169}PCASTRIT.RelationalAccident;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\vider dim"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{AC85927F-2242-4333-8D6C-9CD59F516A1D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="vider dim"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{91094F27-4C18-4E03-BB79-807AAA509B31}"
+          SQLTask:SqlStatementSource="DELETE FROM dw.DimTopographie;&#xA;DBCC CHECKIDENT ('dw.DimTopographie', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\vue_dim_topographie"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{7E5EF0A1-6AAB-4683-83EE-A73DA8D60567}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="vue_dim_topographie"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\vue_dim_topographie\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of agglomeration]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of agglomeration"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of type_intersection]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of type_intersection"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of categorie_route]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of categorie_route"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of regime_circulation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of regime_circulation"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Copy of profil_long]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of profil_long"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[aglo_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[aglo_deriv]"
+                      name="aglo_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]},1,1)) + [SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]},2,[LEN](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]})),"NC")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of agglomeration],1,1)) + SUBSTRING([Copy of agglomeration],2,LEN([Copy of agglomeration])),"NC")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[type_intersection_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[type_intersection_deriv]"
+                      name="type_intersection_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]},1,1)) + [SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]},2,[LEN](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]})),"NC")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of type_intersection],1,1)) + SUBSTRING([Copy of type_intersection],2,LEN([Copy of type_intersection])),"NC")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[cat_route_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[cat_route_deriv]"
+                      name="cat_route_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]},1,1)) + [SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]},2,[LEN](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]})),"NC")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of categorie_route],1,1)) + SUBSTRING([Copy of categorie_route],2,LEN([Copy of categorie_route])),"NC")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[regime_circulation_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[regime_circulation_deriv]"
+                      name="regime_circulation_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]},1,1)) + [SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]},2,[LEN](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]})),"NC")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of regime_circulation],1,1)) + SUBSTRING([Copy of regime_circulation],2,LEN([Copy of regime_circulation])),"NC")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[profil_long_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[profil_long_deriv]"
+                      name="profil_long_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL]([UPPER]([SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]},1,1)) + [SUBSTRING](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]},2,[LEN](#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]})),"NC")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(UPPER(SUBSTRING([Copy of profil_long],1,1)) + SUBSTRING([Copy of profil_long],2,LEN([Copy of profil_long])),"NC")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vue_dim_topographie\Conversion de données"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données].Columns[aglo_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="aglo_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[aglo_deriv]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données].Columns[type_intersection_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="type_intersection_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[type_intersection_deriv]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données].Columns[cat_route_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="cat_route_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[cat_route_deriv]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données].Columns[regime_circulation_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="regime_circulation_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[regime_circulation_deriv]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données].Columns[profil_long_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="profil_long_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[profil_long_deriv]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of aglo_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of aglo_deriv]"
+                      name="Copy of aglo_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[aglo_deriv]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of type_intersection_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of type_intersection_deriv]"
+                      name="Copy of type_intersection_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[type_intersection_deriv]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of cat_route_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of cat_route_deriv]"
+                      name="Copy of cat_route_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[cat_route_deriv]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of regime_circulation_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of regime_circulation_deriv]"
+                      name="Copy of regime_circulation_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[regime_circulation_deriv]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of profil_long_deriv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of profil_long_deriv]"
+                      name="Copy of profil_long_deriv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[profil_long_deriv]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vue_dim_topographie\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dw].[DimTopographie]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\vue_dim_topographie\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[destination]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[aglo_derivFinal]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="aglo_derivFinal"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[agglomeration]"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[aglo_derivFinal]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[type_intersection_final]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="type_intersection_final"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[type_intersection]"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection_final]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[cat_route_final]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="cat_route_final"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[categorie_route]"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[cat_route_final]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[regime_circulation_final]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="regime_circulation_final"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[regime_circulation]"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation_final]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[profil_long_final]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="profil_long_final"
+                      cachedSortKeyPosition="5"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[profil_long]"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long_final]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[topo_key]"
+                      dataType="i4"
+                      name="topo_key" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[agglomeration]"
+                      dataType="wstr"
+                      length="100"
+                      name="agglomeration" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[type_intersection]"
+                      dataType="wstr"
+                      length="100"
+                      name="type_intersection" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[categorie_route]"
+                      dataType="wstr"
+                      length="100"
+                      name="categorie_route" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[regime_circulation]"
+                      dataType="wstr"
+                      length="100"
+                      name="regime_circulation" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[profil_long]"
+                      dataType="wstr"
+                      length="100"
+                      name="profil_long" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vue_dim_topographie\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vue_dim_topographie\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[v_dim_topographie]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\vue_dim_topographie\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[source]"
+                  connectionManagerRefId="Package.ConnectionManagers[source]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[agglomeration]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[agglomeration]"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[agglomeration]"
+                      name="agglomeration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[type_intersection]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[type_intersection]"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[type_intersection]"
+                      name="type_intersection"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[categorie_route]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[categorie_route]"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[categorie_route]"
+                      name="categorie_route"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[regime_circulation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[regime_circulation]"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[regime_circulation]"
+                      name="regime_circulation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[profil_long]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[profil_long]"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[profil_long]"
+                      name="profil_long"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[agglomeration]"
+                      dataType="wstr"
+                      length="50"
+                      name="agglomeration" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[type_intersection]"
+                      dataType="wstr"
+                      length="50"
+                      name="type_intersection" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[categorie_route]"
+                      dataType="wstr"
+                      length="50"
+                      name="categorie_route" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[regime_circulation]"
+                      dataType="wstr"
+                      length="50"
+                      name="regime_circulation" />
+                    <externalMetadataColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[profil_long]"
+                      dataType="wstr"
+                      length="50"
+                      name="profil_long" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[agglomeration]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[agglomeration]"
+                      name="agglomeration" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[type_intersection]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[type_intersection]"
+                      name="type_intersection" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[categorie_route]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[categorie_route]"
+                      name="categorie_route" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[regime_circulation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[regime_circulation]"
+                      name="regime_circulation" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[profil_long]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[profil_long]"
+                      name="profil_long" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vue_dim_topographie\Table de caractères"
+              componentClassID="Microsoft.CharacterMap"
+              contactInfo="Table de caractères;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Applique des fonctions de chaîne aux données caractères. Par exemple, convertissez des données en majuscules en données en minuscules. Fonctionne uniquement sur les données de colonne présentant un type chaîne."
+              name="Table de caractères"
+              usesDispositions="true"
+              version="2">
+              <inputs>
+                <input
+                  refId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères]"
+                  name="Entrée de la table de caractères">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères].Columns[agglomeration]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="agglomeration"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[agglomeration]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères].Columns[type_intersection]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="type_intersection"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[type_intersection]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères].Columns[categorie_route]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="categorie_route"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[categorie_route]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères].Columns[regime_circulation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="regime_circulation"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[regime_circulation]" />
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères].Columns[profil_long]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="profil_long"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[profil_long]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères]"
+                  exclusionGroup="1"
+                  name="Sortie de la table de caractères"
+                  synchronousInputId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Colonne de mappage"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]"
+                      name="Copy of agglomeration"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.UInt32"
+                          description="Spécifie les opérations de chaînes à appliquer."
+                          name="MapFlags"
+                          typeConverter="LCMappingType">256</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[agglomeration]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Colonne de mappage"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]"
+                      name="Copy of type_intersection"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.UInt32"
+                          description="Spécifie les opérations de chaînes à appliquer."
+                          name="MapFlags"
+                          typeConverter="LCMappingType">256</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[type_intersection]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Colonne de mappage"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]"
+                      name="Copy of categorie_route"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.UInt32"
+                          description="Spécifie les opérations de chaînes à appliquer."
+                          name="MapFlags"
+                          typeConverter="LCMappingType">256</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[categorie_route]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Colonne de mappage"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]"
+                      name="Copy of regime_circulation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.UInt32"
+                          description="Spécifie les opérations de chaînes à appliquer."
+                          name="MapFlags"
+                          typeConverter="LCMappingType">256</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[regime_circulation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Colonne de mappage"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]"
+                      name="Copy of profil_long"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.UInt32"
+                          description="Spécifie les opérations de chaînes à appliquer."
+                          name="MapFlags"
+                          typeConverter="LCMappingType">256</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée sur laquelle s'appliquent les opérations."
+                          name="InputColumnLineageID">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[profil_long]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie d'erreur de la table de caractères]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de la table de caractères"
+                  synchronousInputId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie d'erreur de la table de caractères].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vue_dim_topographie\Trier"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
+              name="Trier"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si la transformation de tri supprime les lignes comportant des valeurs de tri en double."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le nombre maximal de threads à utiliser pour le tri."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri]"
+                  name="Entrée de tri">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[agglomeration]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="agglomeration"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[agglomeration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[type_intersection]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="type_intersection"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[type_intersection]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[categorie_route]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="categorie_route"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[categorie_route]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[regime_circulation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="regime_circulation"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[regime_circulation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[profil_long]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="profil_long"
+                      lineageId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[profil_long]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of agglomeration]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of agglomeration"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of type_intersection]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of type_intersection"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of categorie_route]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of categorie_route"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of regime_circulation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of regime_circulation"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of profil_long]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of profil_long"
+                      lineageId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[aglo_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="aglo_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[aglo_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[type_intersection_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="type_intersection_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[type_intersection_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[cat_route_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="cat_route_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[cat_route_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[regime_circulation_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="regime_circulation_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[regime_circulation_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[profil_long_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="102"
+                      cachedName="profil_long_deriv"
+                      lineageId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[profil_long_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of aglo_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of aglo_deriv"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of aglo_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of type_intersection_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of type_intersection_deriv"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of type_intersection_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of cat_route_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of cat_route_deriv"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of cat_route_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of regime_circulation_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of regime_circulation_deriv"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of regime_circulation_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri].Columns[Copy of profil_long_deriv]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of profil_long_deriv"
+                      lineageId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of profil_long_deriv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri]"
+                  isSorted="true"
+                  name="Sortie de tri">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[agglomeration]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[agglomeration]"
+                      name="agglomeration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[agglomeration]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection]"
+                      name="type_intersection">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[type_intersection]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[categorie_route]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[categorie_route]"
+                      name="categorie_route">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[categorie_route]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation]"
+                      name="regime_circulation">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[regime_circulation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long]"
+                      name="profil_long">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[profil_long]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of agglomeration]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of agglomeration]"
+                      name="Copy of agglomeration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of agglomeration]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of type_intersection]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of type_intersection]"
+                      name="Copy of type_intersection">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of type_intersection]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of categorie_route]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of categorie_route]"
+                      name="Copy of categorie_route">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of categorie_route]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of regime_circulation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of regime_circulation]"
+                      name="Copy of regime_circulation">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of regime_circulation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of profil_long]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[Copy of profil_long]"
+                      name="Copy of profil_long">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères].Columns[Copy of profil_long]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[aglo_deriv]"
+                      dataType="wstr"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[aglo_deriv]"
+                      name="aglo_deriv">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[aglo_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection_deriv]"
+                      dataType="wstr"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection_deriv]"
+                      name="type_intersection_deriv">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[type_intersection_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[cat_route_deriv]"
+                      dataType="wstr"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[cat_route_deriv]"
+                      name="cat_route_deriv">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[cat_route_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation_deriv]"
+                      dataType="wstr"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation_deriv]"
+                      name="regime_circulation_deriv">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[regime_circulation_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long_deriv]"
+                      dataType="wstr"
+                      length="102"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long_deriv]"
+                      name="profil_long_deriv">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[profil_long_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[aglo_derivFinal]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[aglo_derivFinal]"
+                      name="aglo_derivFinal"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of aglo_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection_final]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[type_intersection_final]"
+                      name="type_intersection_final"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of type_intersection_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[cat_route_final]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[cat_route_final]"
+                      name="cat_route_final"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of cat_route_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation_final]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[regime_circulation_final]"
+                      name="regime_circulation_final"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of regime_circulation_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long_final]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri].Columns[profil_long_final]"
+                      name="profil_long_final"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of profil_long_deriv]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\vue_dim_topographie.Paths[Sortie de colonne dérivée]"
+              endId="Package\vue_dim_topographie\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de colonne dérivée"
+              startId="Package\vue_dim_topographie\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\vue_dim_topographie.Paths[Sortie de conversion de données]"
+              endId="Package\vue_dim_topographie\Trier.Inputs[Entrée de tri]"
+              name="Sortie de conversion de données"
+              startId="Package\vue_dim_topographie\Conversion de données.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\vue_dim_topographie.Paths[Sortie de la table de caractères]"
+              endId="Package\vue_dim_topographie\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de la table de caractères"
+              startId="Package\vue_dim_topographie\Table de caractères.Outputs[Sortie de la table de caractères]" />
+            <path
+              refId="Package\vue_dim_topographie.Paths[Sortie de source OLE DB]"
+              endId="Package\vue_dim_topographie\Table de caractères.Inputs[Entrée de la table de caractères]"
+              name="Sortie de source OLE DB"
+              startId="Package\vue_dim_topographie\Source OLE DB.Outputs[Sortie de source OLE DB]" />
+            <path
+              refId="Package\vue_dim_topographie.Paths[Sortie de tri]"
+              endId="Package\vue_dim_topographie\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de tri"
+              startId="Package\vue_dim_topographie\Trier.Outputs[Sortie de tri]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{3A324234-CEB4-4B1B-BCC5-F0999057C362}"
+      DTS:From="Package\vider dim"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\vue_dim_topographie" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="120.8,41.6"
+          Id="Package\vider dim"
+          TopLeft="134.166661335362,24.2666668595208" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\vue_dim_topographie"
+          TopLeft="109.999995628993,90.1333340496487" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="196.883328482177,65.8666668595208">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.2666671901279"
+              Start="0,0"
+              End="0,16.7666671901279">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7666671901279" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\vue_dim_topographie">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\vue_dim_topographie\Source OLE DB"
+          TopLeft="124.999995032946,10.4000000826518" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\vue_dim_topographie\Conversion de données"
+          TopLeft="129.166661534045,191.533334855504" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\vue_dim_topographie\Table de caractères"
+          TopLeft="124.999995032946,70.2000005578995" />
+        <NodeLayout
+          Size="100,41.6"
+          Id="Package\vue_dim_topographie\Trier"
+          TopLeft="376.851836877105,225.333335124122" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\vue_dim_topographie\Destination OLE DB"
+          TopLeft="144.444438704738,289.851854155387" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\vue_dim_topographie\Colonne dérivée"
+          TopLeft="144.999994238218,132.60000105381" />
+        <EdgeLayout
+          Id="Package\vue_dim_topographie.Paths[Sortie de tri]"
+          TopLeft="426.851836877105,266.933335124122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-196.807398172367,22.9185190312657"
+              Start="0,0"
+              End="-196.807398172367,15.4185190312657">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.45925951563285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.45925951563285"
+                    Point2="0,11.4592595156329"
+                    Point3="-4,11.4592595156329" />
+                  <mssgle:LineSegment
+                    End="-192.807398172367,11.4592595156329" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-192.807398172367,11.4592595156329"
+                    Point2="-196.807398172367,11.4592595156329"
+                    Point3="-196.807398172367,15.4592595156329" />
+                  <mssgle:LineSegment
+                    End="-196.807398172367,15.4185190312657" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\vue_dim_topographie.Paths[Sortie de source OLE DB]"
+          TopLeft="124.999995032946,31.2000000826518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1.56319401867222E-13,59.8000004752477"
+              Start="0,0"
+              End="-7.50000000000016,59.8000004752477">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5000000000002,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5000000000002,0"
+                    Point2="-22.5000000000002,0"
+                    Point3="-22.5000000000002,4" />
+                  <mssgle:LineSegment
+                    End="-22.5000000000002,55.8000004752477" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5000000000002,55.8000004752477"
+                    Point2="-22.5000000000002,59.8000004752477"
+                    Point3="-18.5000000000002,59.8000004752477" />
+                  <mssgle:LineSegment
+                    End="-7.50000000000016,59.8000004752477" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\vue_dim_topographie.Paths[Sortie de la table de caractères]"
+          TopLeft="124.999995032946,96.6000005578995">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.9999992052714,56.8000004959106"
+              Start="0,0"
+              End="12.4999992052714,56.8000004959106">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,52.8000004959106" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,52.8000004959106"
+                    Point2="-22.5,56.8000004959106"
+                    Point3="-18.5,56.8000004959106" />
+                  <mssgle:LineSegment
+                    End="12.4999992052714,56.8000004959106" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\vue_dim_topographie.Paths[Sortie de conversion de données]"
+          TopLeft="317.166661534045,212.333334855504">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.6851753430606,33.8000002686181"
+              Start="0,0"
+              End="52.1851753430606,33.8000002686181">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="25.8425876715303,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.8425876715303,0"
+                    Point2="29.8425876715303,0"
+                    Point3="29.8425876715303,4" />
+                  <mssgle:LineSegment
+                    End="29.8425876715303,29.8000002686181" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.8425876715303,29.8000002686181"
+                    Point2="29.8425876715303,33.8000002686181"
+                    Point3="33.8425876715303,33.8000002686181" />
+                  <mssgle:LineSegment
+                    End="52.1851753430606,33.8000002686181" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\vue_dim_topographie.Paths[Sortie de colonne dérivée]"
+          TopLeft="144.999994238218,159.00000105381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.8333327041731,53.3333338016935"
+              Start="0,0"
+              End="-23.3333327041731,53.3333338016935">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-34.3333327041731,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.3333327041731,0"
+                    Point2="-38.3333327041731,0"
+                    Point3="-38.3333327041731,4" />
+                  <mssgle:LineSegment
+                    End="-38.3333327041731,49.3333338016935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-38.3333327041731,49.3333338016935"
+                    Point2="-38.3333327041731,53.3333338016935"
+                    Point3="-34.3333327041731,53.3333338016935" />
+                  <mssgle:LineSegment
+                    End="-23.3333327041731,53.3333338016935" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\vue_dim_topographie\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\vue_dim_topographie\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

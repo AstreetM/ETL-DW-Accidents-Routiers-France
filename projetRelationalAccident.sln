@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36631.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "projetRelationalAccident", "projetRelationalAccident.dtproj", "{B2E932D5-41BA-45BF-B110-7C57CA6FD54C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2E932D5-41BA-45BF-B110-7C57CA6FD54C}.Development|Default.ActiveCfg = Development
+		{B2E932D5-41BA-45BF-B110-7C57CA6FD54C}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37A22B3D-5732-4B0F-875E-3316F0F6D41B}
+	EndGlobalSection
+EndGlobal
